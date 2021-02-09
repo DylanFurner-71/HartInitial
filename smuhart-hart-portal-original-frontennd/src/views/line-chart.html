@@ -1,0 +1,883 @@
+<div ng-repeat="surveyResponse in surveyResponses">
+<div ng-controller="LineGraphController as ctrl" ng-init="init(surveyResponse)" >
+<div style="text-align: center; font-size: 18px; font-weight: bold"> 1/11 </div>
+<div style="font-size: 25px; font-weight: bold; margin-left: 10px"> Name: {{finalObj.info.name}}
+<span style="float: right; font-size: 25px; font-weight: bold; margin-right: 10px"> SMU ID#: {{finalObj.info.smuId}} </span></div>
+<div class="result-page" style="height: 1250px">
+<h1 style="text-align:center"><strong> Hart Leadership Assessment (HLA) Overview </strong></h1><br>
+<div style="font-size: 20px; margin: 20px">
+The HLA is designed to help you evaluate your leadership capabilities in comparison to a "Good Leader" and a "Poor Leader" you know.  Because the HLA is a self-assessment, the good/poor leader comparison method helps you better rate your behavior based on your personal experiences with both leaders.
+<br><br>
+The HLA assesses <strong> behavior-based </strong> competencies demonstrated by project and first level managers.   The HLA is not a personality test nor does it claim anything definitive about you.  Your HLA Report result is merely feedback for you to consider in the context of this course or in other areas of your life.
+<br><br>
+As you review your report please keep in mind the rules of feedback.
+<br>
+<strong>
+<li> Feedback is data </li>
+<!-- /* removed 8/11 */ -->
+<li> Data is neutral (not good or bad) </li>
+<!-- /* changed 8/11 */ -->
+<div style="font-size: 14px; margin-left: 25px"> Two common mistakes
+1. <u> Over Acceptance </u> (you accept without question) <br>
+2. <u> Over Dismissive </u> (you reject everything) </div><br>
+<!-- /* changed 8/11 */ -->
+<li> Balance approach to considering data, ask those who know you well to confirm or dispel (remember, you are the expert on you) </li>
+<li> Data is static, (this represents your state of mind at the time you took the survey) </li><br><br>
+The Lyle Leadership Framework
+</strong>
+was designed specifically for engineering students. A group of Lyle faculty, staff, and colleagues from the Center for Creative Leadership created the framework to guide leadership development efforts in the Lyle School of Engineering. Leadership is a vast and complex phenomenon.  An arch was selected as a symbol  for leadership.  Like leadership, arches are both simple and complex structures.  Arches symbolize portal in which one may transit from one place to another.
+<br><br>
+This framework  does not intend to cover every aspect of leadership. Instead, it helps define the key elements of leadership relevant  to engineering and related disciplines.
+<!-- </div>
+<div style="font-size: 18px; margin: 20px"> -->
+<img data-ng-src="../styles/hartlogo.jpg" style="float: right;" height="300px" width="400px">
+The leadership arch is divided into four sections, indicative of the Focus Areas of the framework.
+<br><br>
+<b> Personal Leadership </b> forms the foundation, or base of the arch.
+<br><br>
+The left side of the arch symbolizes <b> Relational Leadership </b> and the right  side of the arch represents <b> Functional Leadership. </b>
+<br><br>
+The  keystone, or top of the arch, represents <b> Leading in Context. </b>
+</div>
+
+</div>
+<div style="text-align: center; font-size: 18px; font-weight: bold"> 2/11 </div>
+
+<!-- /* changed 8/11 */ -->
+<div class="result-page" style="height: 1300px; font-size: 18px">
+<div class="small-heading">
+Personal Leadership <br>
+Self-Awareness, Intentional Learner, and Communicates Effectively <br>
+</div>
+<div style="margin-left: 20px; margin-right: 20px">
+Effective leadership is built on a solid foundation. Personal leadership encompasses the self-awareness, knowledge, and personal management required of a Lyle Leader. Leadership development begins with self-discovery: acknowledging personal strengths, shortcomings, and developing one's capacity for self-management. Lyle leaders take responsibility for personal and professional development and make a commitment to enrichment regardless of one's career path.
+</div>
+<div>
+<img data-ng-src="../styles/Hart1.png" style="float: left; height: 140px; width: 210px; margin-left: 20px; margin-right: 20px">
+<!-- /* changed 8/11 */ -->
+<div style="margin-bottom: 10px; color: #FF5050 !important;"> Self-Awareness </div>
+Exhibits knowledge of personal values, strengths, shortcomings, and <br> developmental opportunities. Uses self-assessment strategies to inform personal <br> growth and development.
+</div>
+<!-- /* added 8/11 */ -->
+<br><br>
+<div>
+<img data-ng-src="../styles/Hart2.png" style="float: left; height: 140px; width: 210px; margin-left: 20px; margin-right: 20px">
+<!-- /* changed 8/11 */ -->
+<div style="margin-bottom: 10px; color: #FF5050 !important;"> Intentional Learner </div>
+Has knowledge of personal learning style and leverages this knowledge <br> to enhance personal performance, knowledge of self, others, and <br>leadership ability.
+</div>
+<!-- /* added 8/11 */ -->
+<br><br>
+<div>
+<img data-ng-src="../styles/Hart3.png" style="float: left; height: 140px; width: 210px; margin-left: 20px; margin-right: 20px">
+<!-- /* changed 8/11 */ -->
+<div style="margin-bottom: 10px; color: #FF5050 !important;"> Communicates Effectively </div>
+Has the ability to communicate effectively through a variety of <br> methods, media, and within a range of contexts.
+</div>
+<!-- /* changed 8/11 */ -->
+<br><br><br>
+
+<div class="small-heading">
+Relational Leadership <br>
+Develops Relationships, Diversity and Difference, and Engaging Leadership <br>
+</div>
+<div style="margin-left: 20px; margin-right: 20px">
+We believe success hinges on an ability to work with and through others. Leaders must learn to form and maintain quality relationships built on mutual understanding, respect, compromise, and diligence. This capacity increases as leaders learn to understand differences, value diversity, inspire people, and hold others accountable. Throughout one's leadership journey, well developed relational networks can provide a critical source of support and guidance.
+</div>
+<div>
+<img data-ng-src="../styles/Hart4.png" style="float: left; height: 140px; width: 210px; margin-left: 20px; margin-right: 20px">
+<!-- /* changed 8/11 */ -->
+<div style="margin-bottom: 10px; color: #FF5050 !important;"> Develops Relationships </div>
+Creates positive, welcoming environment; able to see issues from multiple <br> points of view and builds effective inter- and intra-group relationships.
+</div>
+<!-- /* changed 8/11 */ -->
+<br><br><br>
+<div>
+<img data-ng-src="../styles/Hart5.png" style="float: left; height: 140px; width: 210px; margin-left: 20px; margin-right: 20px">
+<!-- /* changed 8/11 */ -->
+<div style="margin-bottom: 10px; color: #FF5050 !important;"> Diversity and Differences </div>
+Recognizes the value of different perspectives, skillsets, and people; <br> is able to facilitate productive outcomes in diverse groups.
+</div>
+<!-- /* changed 8/11 */ -->
+<br><br><br>
+<div>
+<img data-ng-src="../styles/Hart6.png" style="float: left; height: 140px; width: 210px; margin-left: 20px; margin-right: 20px">
+<!-- /* changed 8/11 */ -->
+<div style="margin-bottom: 10px; color: #FF5050 !important;"> Engaging Leadership </div>
+Enables others to step up and lead; creates conditions for others to shine; <br> generates collective commitment and learning.
+</div>
+
+</div>
+<div style="text-align: center; font-size: 18px; font-weight: bold"> 3/11 </div>
+
+<div class="result-page" style="height: 1300px; font-size: 18px">
+<div class="small-heading">
+Functional Leadership <br>
+Directive Leadership, Champions Effective Processes, and Problem Solving <br>
+</div>
+<div style="margin-left: 20px; margin-right: 20px">
+Engineering leaders have a responsibility, where possible, to help workgroups and organizations operate more effectively. All Lyle students have the opportunity to learn skills and processes that positively influence group functions, outcomes, and their ability to learn from experience. These practices are equally important for positional leaders as well as for members of self-directed teams.
+</div>
+<div>
+<img data-ng-src="../styles/Hart7.png" style="float: left; height: 140px; width: 210px; margin-left: 20px; margin-right: 20px">
+<!-- /* changed 8/11 */ -->
+<div style="margin-bottom: 10px; color: #FF5050 !important;"> Directive Leadership </div>
+Coordinates members and maintains accountability for effective outcomes. Sets <br> direction, communicates expectations, and <br> monitors progress.
+</div>
+<!-- /* added 8/11 */ -->
+<br><br>
+<div>
+<img data-ng-src="../styles/Hart8.png" style="float: left; height: 140px; width: 210px; margin-left: 20px; margin-right: 20px">
+<!-- /* changed 8/11 */ -->
+<div style="margin-bottom: 10px; color: #FF5050 !important;"> Champions Effective  Processes </div>
+Establishes  systems and processes  that  facilitate efficient and effective <br> outcomes.
+</div>
+<!-- /* changed 8/11 */ -->
+<br><br><br>
+<div>
+<img data-ng-src="../styles/Hart9.png" style="float: left; height: 140px; width: 210px; margin-left: 20px; margin-right: 20px">
+<!-- /* changed 8/11 */ -->
+<div style="margin-bottom: 10px; color: #FF5050 !important;"> Problem Solving </div>
+Facilitates effective problem identification and solving strategies; identifies and <br> cultivates resources; delivers results.
+</div>
+<!-- /* changed 8/11 */ -->
+<br><br><br>
+
+<div class="small-heading">
+Leading in Context <br>
+Strategic Perspective, Ethics and Integrity, and Innovative Spirit <br>
+</div>
+<div style="margin-left: 20px; margin-right: 20px">
+Leadership is best learned through practice. No leadership theory, model, or media resource conveys the fluid nature of leading in context. Environments are shaped by a dynamic array of situations and circumstances, where conditions change as people engage and disengage.
+Experience helps Lyle leaders learn to assess their context and appropriately adapt their style. The Hart Center encourages students to venture into their context, perform leadership, and then absorb the lessons of experience.
+</div>
+<div>
+<img data-ng-src="../styles/Hart10.png" style="float: left; height: 140px; width: 210px; margin-left: 20px; margin-right: 20px">
+<!-- /* changed 8/11 */ -->
+<div style="margin-bottom: 10px; color: #FF5050 !important;"> Strategic Perspective </div>
+Able to evaluate issues from multiple perspectives and identify the core problem; <br> considers options and tradeoffs; makes effective use of resources.
+</div>
+<!-- /* changed 8/11 */ -->
+<br><br><br>
+<div>
+<img data-ng-src="../styles/Hart11.png" style="float: left; height: 140px; width: 210px; margin-left: 20px; margin-right: 20px">
+<!-- /* changed 8/11 */ -->
+<div style="margin-bottom: 10px; color: #FF5050 !important;"> Ethics and Integrity </div>
+Knowledgeable of and committed to a meaningful set of ethical guidelines and <br> principles. Actions are consistent with personal values.
+</div>
+<!-- /* changed 8/11 */ -->
+<br><br><br>
+<div>
+<img data-ng-src="../styles/Hart12.png" style="float: left; height: 140px; width: 210px; margin-left: 20px; margin-right: 20px">
+<!-- /* changed 8/11 */ -->
+<div style="margin-bottom: 10px; color: #FF5050 !important;"> Innovative Spirit </div>
+Displays the courage to initiate positive change; innovative; will risk failing in <br> front of peers.
+</div>
+
+</div>
+<div style="text-align: center; font-size: 18px; font-weight: bold"> 4/11 </div>
+
+	<div class="result-text">
+		This page represents the comparison of your self-evaluation with your good and poor leaders.
+	</div>
+
+<h1 style="text-align:center"><strong> Good-Poor-Self Chart </strong></h1><br>
+<div  class="result-page" >
+
+<svg width="1000" height="100" style="overflow: hidden;">
+	<text x="15" y="25" font-size="20" font-weight="bold">Name:</text>
+	<text x="120" y="25" font-size="20" font-weight="bold" text-decoration="underline">{{finalObj.info.name}}</text>
+	<text x="688" y="25" font-size="20" font-weight="bold">Survey Date:</text>
+	<text x="830" y="25" font-size="20" font-weight="bold" text-decoration="underline">{{finalObj.info.surveydate | date:"MM/dd/yyyy"}}</text>
+	<text x="15" y="50" font-size="20" font-weight="bold">Major(s):</text>
+	<text x="120" y="50" font-size="20" font-weight="bold" text-decoration="underline">{{majorlist[finalObj.info.major].text}}
+	  {{finalObj.info.otherMajor}}</text>
+	<text x="735" y="50" font-size="20" font-weight="bold">SMU ID:</text>
+	<text x="830" y="50" font-size="20" font-weight="bold" text-decoration="underline">{{finalObj.info.smuId}}</text>
+</svg>
+
+<svg width="1000" height="1000" style="overflow: hidden;">
+	<text text-anchor="middle" x="210" y="465" font-family="Arial" font-size="16"
+		font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Personal </text>
+	<text text-anchor="middle" x="210" y="485" font-family="Arial" font-size="16"
+		font-weight="bold" stroke="none" stroke-width="0" fill="#000000"> Leadership</text>
+	<text text-anchor="middle" x="390" y="465" font-family="Arial" font-size="16"
+		font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Relational </text>
+	<text text-anchor="middle" x="390" y="485" font-family="Arial" font-size="16"
+		font-weight="bold" stroke="none" stroke-width="0" fill="#000000"> Leadership</text>
+	<text text-anchor="middle" x="570" y="465" font-family="Arial" font-size="16"
+		font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Functional </text>
+	<text text-anchor="middle" x="570" y="485" font-family="Arial" font-size="16"
+		font-weight="bold" stroke="none" stroke-width="0" fill="#000000"> Leadership</text>
+	<text text-anchor="middle" x="750" y="465" font-family="Arial" font-size="16"
+		font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Leading </text>
+	<text text-anchor="middle" x="750" y="485" font-family="Arial" font-size="16"
+		font-weight="bold" stroke="none" stroke-width="0" fill="#000000"> In Context</text>
+
+
+	<text text-anchor="start" x="200" y="520" font-family="Arial" font-size="16" font-weight="Bold"
+		stroke="none" stroke-width="0" fill="#222222"> Good Leader </text>
+	<path d="M120,516l50,0" stroke="green" stroke-width="2" fill-opacity="1" fill="none"></path>
+	<text text-anchor="start" x="200" y="550" font-family="Arial" font-size="16" font-weight="Bold"
+		stroke="none" stroke-width="0" fill="#222222"> Poor Leader </text>
+	<path d="M120,546l50,0" stroke="red" stroke-width="2" fill-opacity="1" fill="none"></path>
+	<text text-anchor="start" x="200" y="580" font-family="Arial" font-size="16" font-weight="Bold"
+		stroke="none" stroke-width="0" fill="#222222"> Self </text>
+	<path d="M120,576l50,0" stroke="blue" stroke-width="2" fill-opacity="1" fill="none"></path>
+
+	<text text-anchor="start" x="100" y="670" text-decoration="underline" font-size="16" font-weight="Bold"> Good Leader </text>
+	<text text-anchor="start" x="100" y="690" font-size="16"> {{finalObj.info.goodLeaderName}} </text>
+	<text text-anchor="start" x="100" y="730" text-decoration="underline" font-size="16" font-weight="Bold"> Poor Leader </text>
+	<text text-anchor="start" x="100" y="750" font-size="16"> {{finalObj.info.poorLeaderName}} </text>
+
+
+	<rect x="120" y="71" width="180" height="367" stroke="none" stroke-width="0" fill-opacity = "0.3" fill="#619f42"></rect>
+	<rect x="300" y="71" width="180" height="367" stroke="none" stroke-width="0" fill-opacity = "0.3" fill="#354ca1"></rect>
+	<rect x="480" y="71" width="180" height="367" stroke="none" stroke-width="0" fill-opacity = "0.3" fill="#f99b2a"></rect>
+	<rect x="660" y="71" width="180" height="367" stroke="none" stroke-width="0" fill-opacity = "0.3" fill="#cc0000"></rect>
+
+	<rect x="115" y="93" width="725" height="1" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="115" y="162" width="725" height="1" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="115" y="231" width="725" height="1" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="115" y="300" width="725" height="1" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="115" y="369" width="725" height="1" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="115" y="438" width="725" height="1" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="120" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="180" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="240" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="300" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="360" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="420" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="480" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="540" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="600" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="660" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="720" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="780" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+	<rect x="840" y="71" width="1" height="367" stroke="none" stroke-width="0" fill="Gray"></rect>
+
+	<path ng-attr-d="{{getPath(0)}}" stroke="green" stroke-width="3" fill-opacity="1" fill="none"></path>
+	<path ng-attr-d="{{getPath(2)}}" stroke="blue" stroke-width="4" fill-opacity="1" fill="none"></path>
+	<path ng-attr-d="{{getPath(1)}}" stroke="red" stroke-width="2" fill-opacity="1" fill="none"></path>
+
+	<text text-anchor="middle" x="150" y="45" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Self</text>
+	<text text-anchor="middle" x="150" y="60" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Aware</text>
+	<text text-anchor="middle" x="210" y="45" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Intentional</text>
+	<text text-anchor="middle" x="210" y="60" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Learner</text>
+	<text text-anchor="middle" x="270" y="45" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Commun-</text>
+	<text text-anchor="middle" x="270" y="60" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">ication</text>
+	<text text-anchor="middle" x="330" y="45" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Relationship</text>
+	<text text-anchor="middle" x="330" y="60" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Development</text>
+	<text text-anchor="middle" x="390" y="45" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Diversity &</text>
+	<text text-anchor="middle" x="390" y="60" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Difference</text>
+	<text text-anchor="middle" x="450" y="45" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Engaging </text>
+	<text text-anchor="middle" x="450" y="60" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Leadership</text>
+	<text text-anchor="middle" x="510" y="45" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Directive </text>
+	<text text-anchor="middle" x="510" y="60" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Leadership</text>
+	<text text-anchor="middle" x="570" y="35" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Champion </text>
+	<text text-anchor="middle" x="570" y="51" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Effective</text>
+	<text text-anchor="middle" x="570" y="67" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Processes</text>
+	<text text-anchor="middle" x="630" y="45" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Problem </text>
+	<text text-anchor="middle" x="630" y="60" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Solving</text>
+	<text text-anchor="middle" x="690" y="45" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Strategic </text>
+	<text text-anchor="middle" x="690" y="60" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Perspective</text>
+	<text text-anchor="middle" x="750" y="45" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Ethics </text>
+	<text text-anchor="middle" x="750" y="60" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Integrity</text>
+	<text text-anchor="middle" x="810" y="45" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Innovative </text>
+	<text text-anchor="middle" x="810" y="60" font-family="Arial Narrow"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Spirit</text>
+
+	<text text-anchor="end" x="103" y="97" font-family="Arial" font-size="12" font-weight="Bold"
+		stroke="none" stroke-width="0" fill="#444444">20</text>
+	<text text-anchor="end" x="103" y="166" font-family="Arial" font-size="12" font-weight="Bold"
+		stroke="none" stroke-width="0" fill="#444444">17</text>
+	<text text-anchor="end" x="103" y="235" font-family="Arial" font-size="12" font-weight="Bold"
+		stroke="none" stroke-width="0" fill="#444444">14</text>
+	<text text-anchor="end" x="103" y="304" font-family="Arial" font-size="12" font-weight="Bold"
+		stroke="none" stroke-width="0" fill="#444444">11</text>
+	<text text-anchor="end" x="103" y="373" font-family="Arial" font-size="12" font-weight="Bold"
+		stroke="none" stroke-width="0" fill="#444444">8</text>
+	<text text-anchor="end" x="103" y="442" font-family="Arial" font-size="12" font-weight="Bold"
+		stroke="none" stroke-width="0" fill="#444444">5</text>
+
+	<text text-anchor="middle" x="810" y="585" font-family="Arial"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Self</text>
+	<text text-anchor="middle" x="720" y="565" font-family="Arial"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Poor</text>
+	<text text-anchor="middle" x="720" y="585" font-family="Arial"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Leader</text>
+	<text text-anchor="middle" x="630" y="565" font-family="Arial"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Good</text>
+	<text text-anchor="middle" x="630" y="585" font-family="Arial"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">Leader</text>
+
+	<rect x="600" y="598" width="60" height="2" stroke="none" stroke-width="0"
+		fill="black"></rect>
+	<rect x="690" y="598" width="60" height="2" stroke="none" stroke-width="0"
+		fill="black"></rect>
+	<rect x="780" y="598" width="60" height="2" stroke="none" stroke-width="0"
+		fill="black"></rect>
+
+	<rect x="600" y="600" width="60" height="66" stroke="none" stroke-width="0" fill-opacity="0.9"
+		fill="#619f42"></rect>
+	<rect x="690" y="600" width="60" height="66" stroke="none" stroke-width="0" fill-opacity="0.9"
+		fill="#619f42"></rect>
+	<rect x="780" y="600" width="60" height="66" stroke="none" stroke-width="0" fill-opacity="0.9"
+		fill="#619f42"></rect>
+	<rect x="600" y="666" width="60" height="66" stroke="none" stroke-width="0" fill-opacity="0.7"
+		fill="#354ca1"></rect>
+	<rect x="690" y="666" width="60" height="66" stroke="none" stroke-width="0" fill-opacity="0.7"
+		fill="#354ca1"></rect>
+	<rect x="780" y="666" width="60" height="66" stroke="none" stroke-width="0" fill-opacity="0.7"
+		fill="#354ca1"></rect>
+	<rect x="600" y="732" width="60" height="66" stroke="none" stroke-width="0" fill-opacity="0.8"
+		fill="#f99b2a"></rect>
+	<rect x="690" y="732" width="60" height="66" stroke="none" stroke-width="0" fill-opacity="0.8"
+		fill="#f99b2a"></rect>
+	<rect x="780" y="732" width="60" height="66" stroke="none" stroke-width="0" fill-opacity="0.8"
+		fill="#f99b2a"></rect>
+	<rect x="600" y="798" width="60" height="66" stroke="none" stroke-width="0" fill-opacity="0.7"
+		fill="#cc0000"></rect>
+	<rect x="690" y="798" width="60" height="66" stroke="none" stroke-width="0" fill-opacity="0.7"
+		fill="#cc0000"></rect>
+	<rect x="780" y="798" width="60" height="66" stroke="none" stroke-width="0" fill-opacity="0.7"
+		fill="#cc0000"></rect>
+
+	<g ng-repeat="ele in tableElements">
+	<text text-anchor="end" x="570" ng-attr-y="{{615+$index*22}}" font-family="Arial"
+		font-size="12" stroke="none" stroke-width="0"
+		fill="#222222">{{ele[0]}}</text>
+	<text text-anchor="middle" x="630" ng-attr-y="{{615+$index*22}}" font-family="Arial"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">{{ele[1]}}</text>
+	<text text-anchor="middle" x="720" ng-attr-y="{{615+$index*22}}" font-family="Arial"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">{{ele[2]}}</text>
+	<text text-anchor="middle" x="810" ng-attr-y="{{615+$index*22}}" font-family="Arial"
+		font-size="12" font-weight="Bold" stroke="none" stroke-width="0"
+		fill="#222222">{{ele[3]}}</text>
+	</g>
+
+</svg>
+
+</div>
+<div style="text-align: center; font-size: 18px; font-weight: bold"> 5/11 </div>
+<div style="font-size: 16px; font-weight: bold; margin-left: 10px"> {{finalObj.info.name}}</div>
+<br>
+<h1 style="text-align:center"><strong> Overall Competency Ranking </strong></h1>
+<br>
+<div  class="result-page">
+<br>
+<h2 style="text-align:center"><strong> Your Leadership Competencies </strong></h2>
+<h3 style="text-align:center"><strong> Sorted by Strength </strong></h3>
+
+<svg width="1000" height="800" style="overflow: hidden;">
+
+	<rect x="115" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="255" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="395" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="535" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="675" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="815" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="115" y="593" width="700" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+
+	<g ng-repeat="ele in bgElements" >
+	<rect x="116" ng-attr-y="{{ele.y}}" ng-attr-width="{{ele.width}}" height="33" stroke="none" stroke-width="0"
+		ng-attr-fill="{{ele.color}}"></rect>
+	<text text-anchor="start" x="125" ng-attr-y="{{ele.y+20}}" font-family="Arial" font-size="13" font-weight="bold"
+		stroke="none" stroke-width="0" fill="white">{{ele.text}}</text>
+	</g>
+
+	<rect x="253" y="108" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+	<rect x="277" y="170" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+	<rect x="413" y="231" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+	<rect x="446" y="293" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+
+	<text text-anchor="middle" x="115" y="620" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">5</text>
+	<text text-anchor="middle" x="255" y="620" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">8</text>
+	<text text-anchor="middle" x="395" y="620" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">11</text>
+	<text text-anchor="middle" x="535" y="620" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">14</text>
+	<text text-anchor="middle" x="675" y="620" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">17</text>
+	<text text-anchor="middle" x="815" y="620" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">20</text>
+
+	<rect x="233" y="101.5" width="16" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+	<rect x="258" y="163.5" width="15" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+	<rect x="394" y="224.5" width="15" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+	<rect x="430" y="286.5" width="12" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+
+</svg>
+
+</div>
+<div style="text-align: center; font-size: 18px; font-weight: bold"> 6/11 </div>
+<div style="font-size: 16px; font-weight: bold; margin-left: 10px"> {{finalObj.info.name}}</div>
+<div class="result-text">
+	This page represents your leadership capabilities in the four major leadership focus areas of Personal, Relational, Functional and Leading
+	in Context. <br>
+</div>
+
+<h2 style="text-align:center"><strong> Focus Area Charts </strong></h2>
+<div  class="result-page">
+<div style="text-align:center; font-size:20px"><strong> Focus Area Averages </strong></div>
+
+<!-- /* changed 8/11 */ -->
+<svg width="1000" height="400" style="overflow: hidden;">
+
+	<rect x="130" y="326" width="700" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+
+	<g ng-repeat = "i in [5,8,11,14,17,20]">
+	<rect ng-attr-x="{{130+(i-5)*700/15}}" y="18" width="1" height="308" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<text text-anchor="middle" ng-attr-x="{{130+(i-5)*700/15}}" y="350" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">{{i}}</text>
+	</g>
+
+	<rect x="130" y="31" ng-attr-width="{{getFaaWidth(0)}}" height="51" stroke="none" stroke-width="0" fill="#619f42"></rect>
+	<rect x="130" y="108" ng-attr-width="{{getFaaWidth(1)}}" height="51" stroke="none" stroke-width="0" fill="#354ca1"></rect>
+	<rect x="130" y="185" ng-attr-width="{{getFaaWidth(2)}}" height="51" stroke="none" stroke-width="0" fill="#f99b2a"></rect>
+	<rect x="130" y="262" ng-attr-width="{{getFaaWidth(3)}}" height="51" stroke="none" stroke-width="0" fill="#cc0000"></rect>
+
+	<text text-anchor="start" x="146" y="63" font-family="Arial" font-weight="bold"
+		font-size="16" stroke="none" stroke-width="0" fill="#ffffff">Personal Leadership</text>
+	<text text-anchor="start" x="146" y="140" font-family="Arial" font-weight="bold"
+		font-size="16" stroke="none" stroke-width="0" fill="#ffffff">Relational Leadership</text>
+	<text text-anchor="start" x="146" y="217" font-family="Arial" font-weight="bold"
+		font-size="16" stroke="none" stroke-width="0" fill="#ffffff">Functional Leadership</text>
+	<text text-anchor="start" x="146" y="294" font-family="Arial" font-weight="bold"
+		font-size="16" stroke="none" stroke-width="0" fill="#ffffff">Leading in Context</text>
+
+</svg>
+
+	<div style="text-align: center">
+	<span class="result-text"> Strengths within each focus area. </span> <br>
+	<span style="text-align: center; font-weight: bold; font-size: 20px"> Your Leadership Competencies </span> <br>
+	<span style="text-align: center; font-weight: bold; font-size: 16px"> Grouped by Focus Area </span>
+	</div>
+<!-- /* changed 8/11 */ Complete svg is changed-->
+<svg width="1000" height="560" style="overflow: hidden;">
+	<rect x="130" y="11" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="270" y="11" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="410" y="11" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="550" y="11" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="690" y="11" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="830" y="11" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="130" y="533" width="700" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+
+	<g ng-repeat="elem in bgElement" >
+	<rect x="131" ng-attr-y="{{elem.y-60}}" ng-attr-width="{{elem.width}}" height="33" stroke="none" stroke-width="0"
+		ng-attr-fill="{{elem.color}}"></rect>
+	<text text-anchor="start" x="140" ng-attr-y="{{elem.y-40}}" font-family="Arial" font-size="13" font-weight="bold" fill="#ffffff"
+		stroke="none" stroke-width="0">{{elem.text}}</text>
+	</g>
+
+<!-- 	<rect x="268" y="478" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+	<rect x="292" y="540" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+	<rect x="428" y="601" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+	<rect x="461" y="663" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect> -->
+
+	<text text-anchor="middle" x="130" y="560" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">5</text>
+	<text text-anchor="middle" x="270" y="560" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">8</text>
+	<text text-anchor="middle" x="410" y="560" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">11</text>
+	<text text-anchor="middle" x="550" y="560" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">14</text>
+	<text text-anchor="middle" x="690" y="560" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">17</text>
+	<text text-anchor="middle" x="830" y="560" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">20</text>
+
+<!-- 	<rect x="248" y="471.5" width="16" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+	<rect x="273" y="533.5" width="15" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+	<rect x="409" y="594.5" width="15" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+	<rect x="445" y="656.5" width="12" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect> -->
+
+</svg>
+
+</div>
+<div style="text-align: center; font-size: 18px; font-weight: bold"> 7/11 </div>
+<div style="font-size: 16px; font-weight: bold; margin-left: 10px"> {{finalObj.info.name}}</div>
+<h1 style="text-align:center"><strong> Focus Area Detail </strong></h1><br><br>
+<div  class="result-page" style="font-size: 16px">
+<h2 style="text-align:center"><strong> Personal Leadership </strong></h2>
+<br>
+
+<svg width="100%" height="15%">
+
+  <rect x="7%" y="1%" width="24%" height="70%" style="fill:#ffffff;stroke-width:1;stroke:#ddd"></rect>
+  <rect x="38%" y="1%" width="24%" height="70%" style="fill:#ffffff;stroke-width:1;stroke:#ddd"></rect>
+  <rect x="69%" y="1%" width="24%" height="70%" style="fill:#ffffff;stroke-width:1;stroke:#ddd"></rect>
+  <rect x="10%" y="30%" ng-attr-width={{tableElements[0][3]*.9}}% height="20%" style="fill:#619f42"></rect>
+  <rect x="41%" y="30%" ng-attr-width={{tableElements[1][3]*.9}}% height="20%" style="fill:#619f42"></rect>
+  <rect x="72%" y="30%" ng-attr-width={{tableElements[2][3]*.9}}% height="20%" style="fill:#619f42"></rect>
+  <text text-anchor="middle" font-weight="bold" ng-attr-x="{{10+tableElements[0][3]*.45}}%" y="43%" fill="#444444">Self</text>
+  <text text-anchor="middle" font-weight="bold" ng-attr-x="{{41+tableElements[1][3]*.45}}%" y="43%" fill="#444444">Self</text>
+  <text text-anchor="middle" font-weight="bold" ng-attr-x="{{72+tableElements[2][3]*.45}}%" y="43%" fill="#444444">Self</text>
+  <rect ng-attr-x="{{10+tableElements[0][3]*.9}}%" y="30%" ng-attr-width={{18-tableElements[0][3]*.9}}%
+  height="20%" style="fill:#ffcc00"></rect>
+  <rect ng-attr-x="{{41+tableElements[1][3]*.9}}%" y="30%" ng-attr-width={{18-tableElements[1][3]*.9}}%
+  height="20%" style="fill:#ffcc00"></rect>
+  <rect ng-attr-x="{{72+tableElements[2][3]*.9}}%" y="30%" ng-attr-width={{18-tableElements[2][3]*.9}}%
+  height="20%" style="fill:#ffcc00"></rect>
+  <text text-anchor="middle" font-weight="bold" x="19%" y="20%" fill="#444444">{{tableElements[0][0]}}</text>
+  <text text-anchor="middle" font-weight="bold" x="50%" y="20%" fill="#444444">{{tableElements[1][0]}}</text>
+  <text text-anchor="middle" font-weight="bold" x="81%" y="20%" fill="#444444">{{tableElements[2][0]}}</text>
+  <text text-anchor="middle" x="10%" y="65%" fill="#444444">0%</text>
+  <text text-anchor="middle" x="19%" y="65%" fill="#444444">50%</text>
+  <text text-anchor="middle" x="28%" y="65%" fill="#444444">100%</text>
+  <text text-anchor="middle" x="41%" y="65%" fill="#444444">0%</text>
+  <text text-anchor="middle" x="50%" y="65%" fill="#444444">50%</text>
+  <text text-anchor="middle" x="59%" y="65%" fill="#444444">100%</text>
+  <text text-anchor="middle" x="72%" y="65%" fill="#444444">0%</text>
+  <text text-anchor="middle" x="81%" y="65%" fill="#444444">50%</text>
+  <text text-anchor="middle" x="90%" y="65%" fill="#444444">100%</text>
+
+</svg>
+
+	<strong>
+		<li class="resp-obj" style="margin-left: 644px; border: none"> Good Leader </li>
+		<li class="resp-obj" style="border: none"> Poor Leader </li>
+		<li class="resp-obj" style="border: none"> Me as a Leader </li>
+	</strong><br>
+
+		<ul ng-repeat="(qustnIndex,qustn) in finalObj.quizQues">
+			<li style="list-style: none; float: left; width: 60%; margin: 2.5px" data-ng-if="qustnIndex >= 0 && qustnIndex <= 9">
+			  {{qustnIndex+1}}.&nbsp;{{qustn}} </li>
+			<li class="resp-obj" data-ng-if="qustnIndex >= 0 && qustnIndex <= 9"> {{finalObj.respObj[qustnIndex][0]}} </li>
+			<li class="resp-obj" data-ng-if="qustnIndex >= 0 && qustnIndex <= 9"> {{finalObj.respObj[qustnIndex][1]}} </li>
+			<li class="resp-obj" data-ng-if="qustnIndex >= 0 && qustnIndex <= 9"> {{finalObj.respObj[qustnIndex][2]}} </li>
+			<li class="total-obj" style="margin-left: 608px; background-color: #619f42 !important"
+			data-ng-if="qustnIndex >= 0 && qustnIndex <= 9 && (qustnIndex+1)%5 === 0">
+			{{tableElements[(qustnIndex-4)/5][1]}}/20 </li>
+			<li class="total-obj" style="background-color: #619f42 !important"
+			data-ng-if="qustnIndex >= 0 && qustnIndex <= 9 && (qustnIndex+1)%5 === 0">
+			{{tableElements[(qustnIndex-4)/5][2]}}/20 </li>
+			<li class="total-obj" style="background-color: #619f42 !important"
+			data-ng-if="qustnIndex >= 0 && qustnIndex <= 9 && (qustnIndex+1)%5 === 0">
+			{{tableElements[(qustnIndex-4)/5][3]}}/20 </li>
+		</ul>
+
+		<ul ng-repeat="(qustnIndex,qustn) in finalObj.quizQues">
+			<li style="list-style: none; float: left; width: 60%; margin: 2.5px" data-ng-if="(qustnIndex+1)%5 === 0 && qustnIndex <= 24">
+			  {{qustnIndex+1}}.&nbsp;{{qustn}} </li>
+			<li class="resp-obj" data-ng-if="(qustnIndex+1)%5 === 0 && qustnIndex <= 24"> {{finalObj.respObj[qustnIndex][0]}} </li>
+			<li class="resp-obj" data-ng-if="(qustnIndex+1)%5 === 0 && qustnIndex <= 24"> {{finalObj.respObj[qustnIndex][1]}} </li>
+			<li class="resp-obj" data-ng-if="(qustnIndex+1)%5 === 0 && qustnIndex <= 24"> {{finalObj.respObj[qustnIndex][2]}} </li>
+			<li class="total-obj" style="margin-left: 608px; background-color: #619f42 !important"
+			data-ng-if="qustnIndex == 54"> {{tableElements[2][1]}}/20 </li>
+			<li class="total-obj" style="background-color: #619f42 !important"
+			data-ng-if="qustnIndex == 54"> {{tableElements[2][2]}}/20 </li>
+			<li class="total-obj" style="background-color: #619f42 !important"
+			data-ng-if="qustnIndex == 54"> {{tableElements[2][3]}}/20 </li>
+		</ul>
+
+</div>
+<div style="text-align: center; font-size: 18px; font-weight: bold"> 8/11 </div>
+<div style="font-size: 16px; font-weight: bold; margin-left: 10px"> {{finalObj.info.name}}</div>
+<h1 style="text-align:center"><strong> Focus Area Detail </strong></h1><br><br>
+<div  class="result-page" style="font-size: 16px">
+<h2 style="text-align:center"><strong> Relational Leadership </strong></h2>
+<br>
+
+<svg width="100%" height="15%">
+
+  <rect x="7%" y="1%" width="24%" height="70%" style="fill:#ffffff;stroke-width:1;stroke:#ddd"></rect>
+  <rect x="38%" y="1%" width="24%" height="70%" style="fill:#ffffff;stroke-width:1;stroke:#ddd"></rect>
+  <rect x="69%" y="1%" width="24%" height="70%" style="fill:#ffffff;stroke-width:1;stroke:#ddd"></rect>
+  <rect x="10%" y="30%" ng-attr-width={{tableElements[3][3]*.9}}% height="20%" fill-opacity="0.7" fill="#354ca1"></rect>
+  <rect x="41%" y="30%" ng-attr-width={{tableElements[4][3]*.9}}% height="20%" fill-opacity="0.7" fill="#354ca1"></rect>
+  <rect x="72%" y="30%" ng-attr-width={{tableElements[5][3]*.9}}% height="20%" fill-opacity="0.7" fill="#354ca1"></rect>
+  <text text-anchor="middle" font-weight="bold" ng-attr-x="{{10+tableElements[3][3]*.45}}%" y="43%" fill="#444444">Self</text>
+  <text text-anchor="middle" font-weight="bold" ng-attr-x="{{41+tableElements[4][3]*.45}}%" y="43%" fill="#444444">Self</text>
+  <text text-anchor="middle" font-weight="bold" ng-attr-x="{{72+tableElements[5][3]*.45}}%" y="43%" fill="#444444">Self</text>
+  <rect ng-attr-x="{{10+tableElements[3][3]*.9}}%" y="30%" ng-attr-width={{18-tableElements[3][3]*.9}}%
+  height="20%" style="fill:#ffcc00"></rect>
+  <rect ng-attr-x="{{41+tableElements[4][3]*.9}}%" y="30%" ng-attr-width={{18-tableElements[4][3]*.9}}%
+  height="20%" style="fill:#ffcc00"></rect>
+  <rect ng-attr-x="{{72+tableElements[5][3]*.9}}%" y="30%" ng-attr-width={{18-tableElements[5][3]*.9}}%
+  height="20%" style="fill:#ffcc00"></rect>
+  <text text-anchor="middle" font-weight="bold" x="19%" y="20%" fill="#444444">{{tableElements[3][0]}}</text>
+  <text text-anchor="middle" font-weight="bold" x="50%" y="20%" fill="#444444">{{tableElements[4][0]}}</text>
+  <text text-anchor="middle" font-weight="bold" x="81%" y="20%" fill="#444444">{{tableElements[5][0]}}</text>
+  <text text-anchor="middle" x="10%" y="65%" fill="#444444">0%</text>
+  <text text-anchor="middle" x="19%" y="65%" fill="#444444">50%</text>
+  <text text-anchor="middle" x="28%" y="65%" fill="#444444">100%</text>
+  <text text-anchor="middle" x="41%" y="65%" fill="#444444">0%</text>
+  <text text-anchor="middle" x="50%" y="65%" fill="#444444">50%</text>
+  <text text-anchor="middle" x="59%" y="65%" fill="#444444">100%</text>
+  <text text-anchor="middle" x="72%" y="65%" fill="#444444">0%</text>
+  <text text-anchor="middle" x="81%" y="65%" fill="#444444">50%</text>
+  <text text-anchor="middle" x="90%" y="65%" fill="#444444">100%</text>
+
+</svg>
+
+	<strong>
+		<li class="resp-obj" style="margin-left: 644px; border: none"> Good Leader </li>
+		<li class="resp-obj" style="border: none"> Poor Leader </li>
+		<li class="resp-obj" style="border: none"> Me as a Leader </li>
+	</strong><br>
+
+		<ul ng-repeat="(qustnIndex,qustn) in finalObj.quizQues">
+			<li style="list-style: none; float: left; width: 60%; margin: 2.5px" data-ng-if="qustnIndex >= 10 && qustnIndex <= 24">
+			  {{qustnIndex+1}}.&nbsp;{{qustn}} </li>
+			<li class="resp-obj" data-ng-if="qustnIndex >= 10 && qustnIndex <= 24"> {{finalObj.respObj[qustnIndex][0]}} </li>
+			<li class="resp-obj" data-ng-if="qustnIndex >= 10 && qustnIndex <= 24"> {{finalObj.respObj[qustnIndex][1]}} </li>
+			<li class="resp-obj" data-ng-if="qustnIndex >= 10 && qustnIndex <= 24"> {{finalObj.respObj[qustnIndex][2]}} </li>
+			<li class="total-obj" style="margin-left: 608px; background-color: #667ccc !important"
+			data-ng-if="qustnIndex >= 10 && qustnIndex <= 24 && (qustnIndex+1)%5 === 0">
+			{{tableElements[(qustnIndex+1)/5][1]}}/20 </li>
+			<li class="total-obj" style="background-color: #667ccc !important"
+			data-ng-if="qustnIndex >= 10 && qustnIndex <= 24 && (qustnIndex+1)%5 === 0">
+			{{tableElements[(qustnIndex+1)/5][2]}}/20 </li>
+			<li class="total-obj" style="background-color: #667ccc !important"
+			data-ng-if="qustnIndex >= 10 && qustnIndex <= 24 && (qustnIndex+1)%5 === 0">
+			{{tableElements[(qustnIndex+1)/5][3]}}/20 </li>
+		</ul>
+
+</div>
+<div style="text-align: center; font-size: 18px; font-weight: bold"> 9/11 </div>
+<div style="font-size: 16px; font-weight: bold; margin-left: 10px"> {{finalObj.info.name}}</div>
+<h1 style="text-align:center"><strong> Focus Area Detail </strong></h1><br><br>
+<div  class="result-page" style="font-size: 16px">
+<h2 style="text-align:center"><strong> Functional Leadership </strong></h2>
+<br>
+
+<svg width="100%" height="15%">
+
+  <rect x="7%" y="1%" width="24%" height="70%" style="fill:#ffffff;stroke-width:1;stroke:#ddd"></rect>
+  <rect x="38%" y="1%" width="24%" height="70%" style="fill:#ffffff;stroke-width:1;stroke:#ddd"></rect>
+  <rect x="69%" y="1%" width="24%" height="70%" style="fill:#ffffff;stroke-width:1;stroke:#ddd"></rect>
+  <rect x="10%" y="30%" ng-attr-width={{tableElements[6][3]*.9}}% height="20%" style="fill:#f99b2a"></rect>
+  <rect x="41%" y="30%" ng-attr-width={{tableElements[7][3]*.9}}% height="20%" style="fill:#f99b2a"></rect>
+  <rect x="72%" y="30%" ng-attr-width={{tableElements[8][3]*.9}}% height="20%" style="fill:#f99b2a"></rect>
+  <text text-anchor="middle" font-weight="bold" ng-attr-x="{{10+tableElements[6][3]*.45}}%" y="43%" fill="#444444">Self</text>
+  <text text-anchor="middle" font-weight="bold" ng-attr-x="{{41+tableElements[7][3]*.45}}%" y="43%" fill="#444444">Self</text>
+  <text text-anchor="middle" font-weight="bold" ng-attr-x="{{72+tableElements[8][3]*.45}}%" y="43%" fill="#444444">Self</text>
+  <rect ng-attr-x="{{10+tableElements[6][3]*.9}}%" y="30%" ng-attr-width={{18-tableElements[6][3]*.9}}%
+  height="20%" style="fill:#ffcc00"></rect>
+  <rect ng-attr-x="{{41+tableElements[7][3]*.9}}%" y="30%" ng-attr-width={{18-tableElements[7][3]*.9}}%
+  height="20%" style="fill:#ffcc00"></rect>
+  <rect ng-attr-x="{{72+tableElements[8][3]*.9}}%" y="30%" ng-attr-width={{18-tableElements[8][3]*.9}}%
+  height="20%" style="fill:#ffcc00"></rect>
+  <text text-anchor="middle" font-weight="bold" x="19%" y="20%" fill="#444444">{{tableElements[6][0]}}</text>
+  <text text-anchor="middle" font-weight="bold" x="50%" y="20%" fill="#444444">{{tableElements[7][0]}}</text>
+  <text text-anchor="middle" font-weight="bold" x="81%" y="20%" fill="#444444">{{tableElements[8][0]}}</text>
+  <text text-anchor="middle" x="10%" y="65%" fill="#444444">0%</text>
+  <text text-anchor="middle" x="19%" y="65%" fill="#444444">50%</text>
+  <text text-anchor="middle" x="28%" y="65%" fill="#444444">100%</text>
+  <text text-anchor="middle" x="41%" y="65%" fill="#444444">0%</text>
+  <text text-anchor="middle" x="50%" y="65%" fill="#444444">50%</text>
+  <text text-anchor="middle" x="59%" y="65%" fill="#444444">100%</text>
+  <text text-anchor="middle" x="72%" y="65%" fill="#444444">0%</text>
+  <text text-anchor="middle" x="81%" y="65%" fill="#444444">50%</text>
+  <text text-anchor="middle" x="90%" y="65%" fill="#444444">100%</text>
+
+</svg>
+
+	<strong>
+		<li class="resp-obj" style="margin-left: 644px; border: none"> Good Leader </li>
+		<li class="resp-obj" style="border: none"> Poor Leader </li>
+		<li class="resp-obj" style="border: none"> Me as a Leader </li>
+	</strong><br>
+
+		<ul ng-repeat="(qustnIndex,qustn) in finalObj.quizQues">
+			<li style="list-style: none; float: left; width: 60%; margin: 2.5px" data-ng-if="qustnIndex >= 25 && qustnIndex <= 39">
+			  {{qustnIndex+1}}.&nbsp;{{qustn}} </li>
+			<li class="resp-obj" data-ng-if="qustnIndex >= 25 && qustnIndex <= 39"> {{finalObj.respObj[qustnIndex][0]}} </li>
+			<li class="resp-obj" data-ng-if="qustnIndex >= 25 && qustnIndex <= 39"> {{finalObj.respObj[qustnIndex][1]}} </li>
+			<li class="resp-obj" data-ng-if="qustnIndex >= 25 && qustnIndex <= 39"> {{finalObj.respObj[qustnIndex][2]}} </li>
+			<li class="total-obj" style="margin-left: 608px; background-color: #f99b2a!important"
+			data-ng-if="qustnIndex >= 25 && qustnIndex <= 39 && (qustnIndex+1)%5 === 0">
+			{{tableElements[(qustnIndex+1)/5][1]}}/20 </li>
+			<li class="total-obj" style="background-color: #f99b2a!important"
+			data-ng-if="qustnIndex >= 25 && qustnIndex <= 39 && (qustnIndex+1)%5 === 0">
+			{{tableElements[(qustnIndex+1)/5][2]}}/20 </li>
+			<li class="total-obj" style="background-color: #f99b2a!important"
+			data-ng-if="qustnIndex >= 25 && qustnIndex <= 39 && (qustnIndex+1)%5 === 0">
+			{{tableElements[(qustnIndex+1)/5][3]}}/20 </li>
+		</ul>
+
+</div>
+<div style="text-align: center; font-size: 18px; font-weight: bold"> 10/11 </div>
+<div style="font-size: 16px; font-weight: bold; margin-left: 10px"> {{finalObj.info.name}}</div>
+<h1 style="text-align:center"><strong> Focus Area Detail </strong></h1><br><br>
+<div  class="result-page" style="font-size: 16px">
+<h2 style="text-align:center"><strong> Leading in Context </strong></h2>
+<br>
+
+<svg width="100%" height="15%">
+
+  <rect x="7%" y="1%" width="24%" height="70%" style="fill:#ffffff;stroke-width:1;stroke:#ddd"></rect>
+  <rect x="38%" y="1%" width="24%" height="70%" style="fill:#ffffff;stroke-width:1;stroke:#ddd"></rect>
+  <rect x="69%" y="1%" width="24%" height="70%" style="fill:#ffffff;stroke-width:1;stroke:#ddd"></rect>
+  <rect x="10%" y="30%" ng-attr-width={{tableElements[9][3]*.9}}% height="20%" fill-opacity="0.7" fill="#cc0000"></rect>
+  <rect x="41%" y="30%" ng-attr-width={{tableElements[10][3]*.9}}% height="20%" fill-opacity="0.7" fill="#cc0000"></rect>
+  <rect x="72%" y="30%" ng-attr-width={{tableElements[11][3]*.9}}% height="20%" fill-opacity="0.7" fill="#cc0000"></rect>
+  <text text-anchor="middle" font-weight="bold" ng-attr-x="{{10+tableElements[9][3]*.45}}%" y="43%" fill="#444444">Self</text>
+  <text text-anchor="middle" font-weight="bold" ng-attr-x="{{41+tableElements[10][3]*.45}}%" y="43%" fill="#444444">Self</text>
+  <text text-anchor="middle" font-weight="bold" ng-attr-x="{{72+tableElements[11][3]*.45}}%" y="43%" fill="#444444">Self</text>
+  <rect ng-attr-x="{{10+tableElements[9][3]*.9}}%" y="30%" ng-attr-width={{18-tableElements[9][3]*.9}}%
+  height="20%" style="fill:#ffcc00"></rect>
+  <rect ng-attr-x="{{41+tableElements[10][3]*.9}}%" y="30%" ng-attr-width={{18-tableElements[10][3]*.9}}%
+  height="20%" style="fill:#ffcc00"></rect>
+  <rect ng-attr-x="{{72+tableElements[11][3]*.9}}%" y="30%" ng-attr-width={{18-tableElements[11][3]*.9}}%
+  height="20%" style="fill:#ffcc00"></rect>
+  <text text-anchor="middle" font-weight="bold" x="19%" y="20%" fill="#444444">{{tableElements[9][0]}}</text>
+  <text text-anchor="middle" font-weight="bold" x="50%" y="20%" fill="#444444">{{tableElements[10][0]}}</text>
+  <text text-anchor="middle" font-weight="bold" x="81%" y="20%" fill="#444444">{{tableElements[11][0]}}</text>
+  <text text-anchor="middle" x="10%" y="65%" fill="#444444">0%</text>
+  <text text-anchor="middle" x="19%" y="65%" fill="#444444">50%</text>
+  <text text-anchor="middle" x="28%" y="65%" fill="#444444">100%</text>
+  <text text-anchor="middle" x="41%" y="65%" fill="#444444">0%</text>
+  <text text-anchor="middle" x="50%" y="65%" fill="#444444">50%</text>
+  <text text-anchor="middle" x="59%" y="65%" fill="#444444">100%</text>
+  <text text-anchor="middle" x="72%" y="65%" fill="#444444">0%</text>
+  <text text-anchor="middle" x="81%" y="65%" fill="#444444">50%</text>
+  <text text-anchor="middle" x="90%" y="65%" fill="#444444">100%</text>
+
+</svg>
+
+	<strong>
+		<li class="resp-obj" style="margin-left: 644px; border: none"> Good Leader </li>
+		<li class="resp-obj" style="border: none"> Poor Leader </li>
+		<li class="resp-obj" style="border: none"> Me as a Leader </li>
+	</strong><br>
+
+		<ul ng-repeat="(qustnIndex,qustn) in finalObj.quizQues">
+			<li style="list-style: none; float: left; width: 60%; margin: 2.5px" data-ng-if="qustnIndex >= 40 && qustnIndex <= 54">
+			  {{qustnIndex+1}}.&nbsp;{{qustn}} </li>
+			<li class="resp-obj" data-ng-if="qustnIndex >= 40 && qustnIndex <= 54"> {{finalObj.respObj[qustnIndex][0]}} </li>
+			<li class="resp-obj" data-ng-if="qustnIndex >= 40 && qustnIndex <= 54"> {{finalObj.respObj[qustnIndex][1]}} </li>
+			<li class="resp-obj" data-ng-if="qustnIndex >= 40 && qustnIndex <= 54"> {{finalObj.respObj[qustnIndex][2]}} </li>
+			<li class="total-obj" style="margin-left: 608px; background-color: #ff3333!important"
+			data-ng-if="qustnIndex >= 40 && qustnIndex <= 54 && (qustnIndex+1)%5 === 0">
+			{{tableElements[(qustnIndex+1)/5][1]}}/20 </li>
+			<li class="total-obj" style="background-color: #ff3333!important"
+			data-ng-if="qustnIndex >= 40 && qustnIndex <= 54 && (qustnIndex+1)%5 === 0">
+			{{tableElements[(qustnIndex+1)/5][2]}}/20 </li>
+			<li class="total-obj" style="background-color: #ff3333!important"
+			data-ng-if="qustnIndex >= 40 && qustnIndex <= 54 && (qustnIndex+1)%5 === 0">
+			{{tableElements[(qustnIndex+1)/5][3]}}/20 </li>
+		</ul>
+
+</div>
+<div style="text-align: center; font-size: 18px; font-weight: bold"> 11/11 </div>
+
+<div  class="result-page">
+<br>
+<div style="float: right; font-weight: bold"> {{finalObj.info.name}} </div><br>
+<div style="float: right; font-weight: bold"> {{finalObj.info.smuId	}} </div><br>
+<div style="float: right; font-weight: bold"> {{finalObj.info.surveydate | date:"MM/dd/yyyy"}} </div>
+<div style="width: 55%; margin-left: 5%; margin-top:8%; margin-bottom: 5%; font-weight: bold; font-size: 16px">
+<li style="list-style: none; color:red !important"> Students... </li>
+<I>Check two leadership competencies for which you would like to receive information periodically throughout the semester.</I>
+</div>
+<h3 style="text-align:center"><strong> Your Leadership Competencies </strong></h3>
+<svg width="900" height="700" style="overflow: hidden;">
+
+	<rect x="115" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="255" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="395" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="535" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="675" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="815" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="115" y="593" width="700" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+
+	<g ng-repeat="ele in bgElements">
+	<rect x="70" ng-attr-y="{{ele.y+5}}" width="23" height="23" stroke="black" stroke-width="1" fill="#ffffff"></rect>
+	<rect x="116" ng-attr-y="{{ele.y}}" ng-attr-width="{{ele.width}}" height="33" stroke="none" stroke-width="0"
+		ng-attr-fill="{{ele.color}}"></rect>
+	<text text-anchor="start" x="125" ng-attr-y="{{ele.y+20}}" font-family="Arial" font-size="13" font-weight="bold"
+		stroke="none" stroke-width="0" fill="white">{{ele.text}}</text>
+	</g>
+
+	<rect x="253" y="108" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+	<rect x="277" y="170" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+	<rect x="413" y="231" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+	<rect x="446" y="293" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+
+	<text text-anchor="middle" x="115" y="620" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">5</text>
+	<text text-anchor="middle" x="255" y="620" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">8</text>
+	<text text-anchor="middle" x="395" y="620" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">11</text>
+	<text text-anchor="middle" x="535" y="620" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">14</text>
+	<text text-anchor="middle" x="675" y="620" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">17</text>
+	<text text-anchor="middle" x="815" y="620" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">20</text>
+
+	<rect x="233" y="101.5" width="16" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+	<rect x="258" y="163.5" width="15" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+	<rect x="394" y="224.5" width="15" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+	<rect x="430" y="286.5" width="12" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+</svg>
+<div style="width: 55%; margin-left: 5%; font-weight: bold; font-size: 16px">
+<li style="list-style: none; color:red !important">DON'T FORGET:</li> Remove this page from your report and leave it with your facilitator when you leave.
+</div>
+
+</div>
+<!-- /* changed 8/11 */ -->
+<div class="result-page" style="height: 1300px; text-align: center; font-size: 24px; font-weight: bold"> Notes </div>
+</div>

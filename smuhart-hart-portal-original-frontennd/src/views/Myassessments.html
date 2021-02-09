@@ -1,0 +1,84 @@
+<div ng-controller="AssessmentController as ctrl" ng-init="init()">
+	<div id="homebody">
+		<div class="myleadership">
+			<h1>My Leadership Assessments</h1>
+
+		<div>
+		<br>
+		<h3 style="font-weight: bold; color: #0039a6">Hart Leadership Assessment</h3><br>
+			<h3>
+				<I>Dear Student, please take the Hart Leadership Assessment to assess your level of competency in each of the core leadership areas.</I>
+			</h3>
+		</div>
+		<div ng-show="profileInfo.surveyStatus==1||profileInfo.surveyStatus==2">
+			<h4>
+				<a style="font-weight: bold" ng-click="RedirectInfo()"> Click here </a>
+				to complete your leadership assessment
+			</h4>
+		</div>
+		<div ng-show="profileInfo.allowview==1 && profileInfo.surveyStatus==3">
+			<h4>
+				<a style="font-weight: bold" ng-click="getSurveyResult(profileInfo.smuId)"> Click here </a>
+				to view your survey report
+				<br>
+			</h4>
+		</div>
+		<div ng-show="profileInfo.addedcompetency!=1 && profileInfo.surveyStatus==3 && profileInfo.allowview==1">
+			<h4>
+				<a style="font-weight: bold" ng-click="redirectCompetencies(profileInfo.smuId)"> Click here </a>
+				to select/update your leadership competencies.
+			</h4>
+			<br>
+		</div>
+		<div ng-show="profileInfo.addedcompetency==1">
+			<h4>
+				<i>As a leader you are working to improve leadership in <b>"{{profileInfo.competency1}}" </b> <!-- & "{{profileInfo.competency2}}" --></i>
+				<br><a href="#/complibrary">Click Here</a>
+				to go to the Competency Library & view contents of the competencies you are working on
+			</h4>
+		</div>
+
+		<div ng-show="profileInfo.surveyStatus==3 && profileInfo.allowview!=1">
+			<h5>
+				<i>
+					Thank you for completing the Hart Leadership Assessment. You will receive your leadership profile at the Debrief Session.
+					<br>
+					Please contact khubbard@smu.edu with questions.
+				</i>
+			</h5>
+		</div>
+
+		<div ng-show="profileInfo.allowview!=1 && profileInfo.surveyStatus!=3">
+			<h5>
+				After completing the survey,you can view your report here once the Hart Center makes it available for you!
+				<br>
+				<br>
+				*For best experience please use google chrome to launch the survey
+			</h5>
+		</div>
+		<br>
+
+		<br>
+		<!-- <h3 style="font-weight: bold; color: #0039a6">123 Test  Free Psychological Tests</h3><br>
+		<h4>Learn about your strengths and abilities as a team member by taking the team role assessment or discover how you engage with people, process information and make decisions by taking Jung personality test.
+Feel free to increase your self-awareness by taking the other assessments.</h4><br>
+		<h5>Team Roles Test - measures roles found in businesses and management teams throughout the world in many cultures.</h5><br>
+		<h5>Jung Personality Test - Measures your preferences for dealing with and relating to people, processing information, making decisions and organizing your life</h5><br>
+		<h4><a style="font-weight: bold" href="https://www.123test.com/">Click here</a> to try the above free Psychological Test</h4>
+		<br>
+		<h3 style="font-weight: bold; color: #0039a6">Felder & Soloman Learning Style Inventory</h3>
+		<h5>Discover your learning style to increase your odds for success in and out of the class</h5>
+		<h4><a  style="font-weight: bold" href="http://www.engr.ncsu.edu/learningstyles/ilsweb.html">Click here</a> to try Rich Felder's Learning Styles Assessment
+		  -->
+
+
+
+
+	<div ng-show="error==true">
+		<h4 style="text-align: center; color: Red">Oops! Looks like something went wrong. Please make sure you use your 8-digit SMU ID to login. If the problem persists, please contact Hart center for assistance</h4>
+	</div>
+
+</div>
+</div>
+</div>
+

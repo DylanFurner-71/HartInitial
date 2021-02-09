@@ -1,0 +1,164 @@
+<div ng-controller="ddController as ctrl" ng-init="init()" style="font-family: Tahoma, Geneva, sans-serif">
+    <br>
+    <h1 style="text-align: center; font-weight: bold; color: #619f42"> Diversity and Differences </h1>
+    <h3 style="text-align: center; color: #354ca1; font-weight: bold;"> â€œIntentional Learning is not accidental, and it is driven by a goal or need, even if you donâ€™t know what that is.â€� </h3>
+    <span style="float: right; margin-right: 5%; font-size: 16px;"> - Peter Freeth </span><br><br>
+
+    <div style="border:1px solid #ddd; border-radius:1px; width: 92%; margin-left: 4%; margin-bottom: 4%; padding: 1%;">
+        <span style="font-size: 24px; color: #cc0000; font-weight: bold"> Videos </span><br><br>
+
+        <div class="row" style="text-align: center;">
+
+            <div class="col-sm-4">
+            <a href="http://www.ted.com/talks/spencer_wells_is_building_a_family_tree_for_all_humanity" target="_blank">
+            <img data-ng-src="../../styles/Images_comp/DDv1.jpg" height="200px" width="400px"> </a><br><br>
+            Spencer Wells tells us how we are not so different. <br><br>
+            <button type="button" data-ng-click="ctrl.ddv1()"> Take Quiz </button>
+            </div>
+
+            <div class="col-sm-4">
+            <a href="http://www.ted.com/talks/chimamanda_adichie_the_danger_of_a_single_story" target="_blank">
+            <img data-ng-src="../../styles/Images_comp/DDv2.jpg" height="200px" width="400px"> </a><br><br>
+            Chimamanda Adichie teaches us what is important about perspective. <br>
+            <button type="button" data-ng-click="ctrl.ddv2()"> Take Quiz </button>
+            </div>
+
+            <div class="col-sm-4">
+            <a href="https://www.ted.com/talks/derek_sivers_weird_or_just_different" target="_blank">
+            <img data-ng-src="../../styles/Images_comp/DDv3.jpg" height="200px" width="380px"> </a><br><br>
+            Derek Sivers shows us that there is more than one â€œnormalâ€�. <br>
+            <button type="button" data-ng-click="ctrl.ddv3()"> Take Quiz </button>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <div ng-if="ctrl.videoquiz==1 || ctrl.videoquiz==2 || ctrl.videoquiz==3"
+        style="font-size: 16px; margin-left: 40px">
+        <span style="font-size: 24px; color: #cc0000; font-weight: bold; margin-left: 0px"> Quiz on Video #{{ctrl.videoquiz}}
+        </span><br>
+            <div ng-if="ctrl.videoquiz==1">
+                <b> 1. The evidence from genetic data is that the human population around this time, roughly 70,000 years ago, crashed to fewer than _____ individuals. </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> 5,000 <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> 2,000 <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> 10,000 <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> 7,000 <br><br>
+                <b> 2. There are ____ different languages spoken by six and half billion people. </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> 4,000 <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> 6,000 <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> 5,500 <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> 2,000 <br><br>
+                <b> 3. According to Wellsâ€™ study, where did humanity originate? </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Asia <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Africa <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> America <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Australia <br><br>
+                <b> 4. What gets in the way of you being the best leader when differences arise between teammates? What can you do to overcome that? </b>
+                [free-text answer] <br><br>
+                <b> 5. Do you feel this video helped you in your leadership development journey? </b> [free-text answer]
+            </div>
+
+            <div ng-if="ctrl.videoquiz==2">
+                <b> 1. What book did Chimamanda tell an American student that she recently read before telling him it was a shame that young Americans were serial murderers? </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> American Psycho <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Butterfly Skin <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> The Midnight Assassin <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Psycho <br><br>
+                <b> 2. The single story creates stereotypes,and the problem with stereotypes is not that they are untrue, but that they are:  </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Terrible <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Incomplete <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Constant <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Everywhere <br><br>
+                <b> 3. How does power affect the single story? </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Power does not help the speaker or listener in any way.  <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Power grants the speaker with authority. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Power takes away credibility from everyone. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Power dictates a definitive single story. <br><br>
+                <b> 4. What actions can you take to avoid operating under a single story, a single perception of someone? </b>
+                [free-text answer]
+            </div>
+
+            <div ng-if="ctrl.videoquiz==3">
+                <b> 1. Like USA, Japan names their streets. </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> True <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> False <br><br>
+                <b> 2. Why is it important to prepare yourself before meeting or working with someone from a different culture? </b>
+                [free-text answer]
+            </div>
+
+            <br> <button type="button" data-ng-click="ctrl.submit()" style="margin-left: 40%; width: 10%"> Submit </button>
+        </div>
+
+
+        <br><br>
+
+            <span style="font-size: 24px; color: #cc0000; font-weight: bold;"> Recommended Books </span><br><br>
+            <span style="font-size: 16px">
+            <li> Buckingham, Marcus, and Donald O. Clifton. Now, Discover Your Strengths. New York: Free, 2001. </li>
+            <li> Hawkins, Mike. Activating Your Ambition: A Guide to Coaching the Best out of Yourself and Others. Dallas, TX.: Brown Pub., 2009. </li>
+            <li> Pinkley, Robin L., and Gregory B. Northcraft. Get Paid What You're Worth: The Expert Negotiator's Guide to Salary and Compensation. New York: St. Martin's, 2000. </li>
+            </span><br><br>
+
+            <span style="font-size: 24px; color: #cc0000; font-weight: bold;"> File Guide </span><br><br>
+            <a href="https://www.smu.edu/-/media/Site/Lyle/HCEL/FieldGuides/GRAD-Field-Guide-2016--FINAL-with-cover.ashx?la=en" target="_blank">
+            <img data-ng-src="../../styles/fieldguide.JPG" style="margin-left: 5%" height="405px" width="315px"> </a><br><br>
+
+</div>
+
+</div>
+
+
+

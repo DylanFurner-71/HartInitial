@@ -1,0 +1,75 @@
+<div ng-repeat="surveyResponse in surveyResponses">
+<div ng-controller="LineGraphController as ctrl" ng-init="init(surveyResponse)" class="result-page" style="height:660px">
+	<div style="font-size: 14px; font-weight: bold; color: green">
+	Check <i><u> two leadership competencies </u></i> for which you would like to receive information periodically throughout the semester.
+	</div>
+	<h3 style="text-align:center"><strong> Your Leadership Competencies </strong></h3>
+
+<div class="row" style="margin-left: 7%">
+
+    <div class="col-sm-1">
+    <label style="margin-left: 99%; margin-bottom: 44.8%"> <input type="checkbox" ng-model="checkboxArray[0]"> </label> <br>
+    <label style="margin-left: 99%; margin-bottom: 44.8%"> <input type="checkbox" ng-model="checkboxArray[1]"> </label> <br>    
+    <label style="margin-left: 99%; margin-bottom: 44.8%"> <input type="checkbox" ng-model="checkboxArray[2]"> </label> <br>
+    <label style="margin-left: 99%; margin-bottom: 44.8%"> <input type="checkbox" ng-model="checkboxArray[3]"> </label> <br>
+    <label style="margin-left: 99%; margin-bottom: 44.8%"> <input type="checkbox" ng-model="checkboxArray[4]"> </label> <br>
+    <label style="margin-left: 99%; margin-bottom: 44.8%"> <input type="checkbox" ng-model="checkboxArray[5]"> </label> <br>    
+    <label style="margin-left: 99%; margin-bottom: 44.8%"> <input type="checkbox" ng-model="checkboxArray[6]"> </label> <br>
+    <label style="margin-left: 99%; margin-bottom: 44.8%"> <input type="checkbox" ng-model="checkboxArray[7]"> </label> <br>    
+    <label style="margin-left: 99%; margin-bottom: 44.8%"> <input type="checkbox" ng-model="checkboxArray[8]"> </label> <br>
+    <label style="margin-left: 99%; margin-bottom: 44.8%"> <input type="checkbox" ng-model="checkboxArray[9]"> </label> <br>    
+    <label style="margin-left: 99%; margin-bottom: 44.8%"> <input type="checkbox" ng-model="checkboxArray[10]"> </label> <br>
+    <label style="margin-left: 99%; margin-bottom: 44.8%"> <input type="checkbox" ng-model="checkboxArray[11]"> </label> <br>
+    </div>
+
+	<div class="col-sm-11">
+	<svg width="800" height="524" style="overflow: hidden;">
+
+	<rect x="15" y="0" width="1" height="505" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="155" y="0" width="1" height="505" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="295" y="0" width="1" height="505" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="435" y="0" width="1" height="505" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="575" y="0" width="1" height="505" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="715" y="0" width="1" height="505" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+	<rect x="15" y="504" width="700" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+
+	<g ng-repeat="ele in bgElements">
+	<rect x="16" ng-attr-y="{{ele.y-77}}" ng-attr-width="{{ele.width}}" height="23" stroke="none" stroke-width="0"
+		ng-attr-fill="{{ele.color}}"></rect>
+	<text text-anchor="start" x="25" ng-attr-y="{{ele.y-62}}" font-family="Arial" font-size="13" font-weight="bold"
+		stroke="none" stroke-width="0" fill="white">{{ele.text}}</text>
+	</g>
+	
+<!-- 	<rect x="153" y="108" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+	<rect x="177" y="170" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+	<rect x="313" y="231" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+	<rect x="346" y="293" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect> -->
+
+	<text text-anchor="middle" x="15" y="524" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">5</text>
+	<text text-anchor="middle" x="155" y="524" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">8</text>
+	<text text-anchor="middle" x="295" y="524" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">11</text>
+	<text text-anchor="middle" x="435" y="524" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">14</text>
+	<text text-anchor="middle" x="575" y="524" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">17</text>
+	<text text-anchor="middle" x="715" y="524" font-family="Arial"
+		font-size="13" stroke="none" stroke-width="0" fill="#444444">20</text>
+
+<!-- 	<rect x="133" y="101.5" width="16" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+	<rect x="158" y="163.5" width="15" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+	<rect x="294" y="224.5" width="15" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+	<rect x="330" y="286.5" width="12" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect> -->
+	</svg>
+	</div>
+
+</div>
+
+    <div class="start-button">
+		<button type="button" data-ng-click="submit()"> Submit </button>
+	</div>
+
+</div>
+</div>

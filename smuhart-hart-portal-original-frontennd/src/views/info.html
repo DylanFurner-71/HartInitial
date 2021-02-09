@@ -1,0 +1,142 @@
+<div data-ng-controller="infoCtrl as ctrl" ng-init="init()">
+	<div class="info-page">
+		<form name="infoForm">
+		  <fieldset style="display:table-column">
+		  <div  data-ng-if="infoSection===1">
+		  	<strong>As a student in the Bobby B. Lyle School of Engineering, you will receive a world-class education in engineering and computer science. You will learn technical theory, technical skills, as well as necessary teamwork and leadership skills needed to apply this knowledge.
+	    	The Hart Leadership Assessment (HLA) will help you identify your leadership
+	    	strengths and growth areas. It should take approximately 20-25 minutes to complete.<br><br>
+	    	Please click on the below fields to enter the requested information - Fields marked * are mandatory</strong>
+			    <md-input-container class="md-block">
+                    <label>*SMU ID#</label>
+                    <input md-maxlength="8" maxlength="8" data-ng-model="information.smuId" readonly>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+	                <label>*Last Name, First Name</label>
+	                <input required name="name" md-maxlength="30" maxlength="30" ng-model="information.name">
+                	<div ng-messages="infoForm.name.$error">
+         				<div ng-message="required">Please click above to input your name.</div>
+        			</div>
+	            </md-input-container>
+
+			    <md-input-container class="md-block">
+                    <label>Preferred Name (name you prefer to be called) - Optional</label>
+                    <input md-maxlength="30" maxlength="30" data-ng-model="information.preferredName">
+                </md-input-container>
+
+			    <md-input-container class="md-block">
+                    <label>*SMU Email address</label>
+                    <input required type="email" name="email" md-maxlength="30" maxlength="30" data-ng-model="information.email"
+                     ng-pattern="/^.+@smu.edu/">
+        			<div ng-messages="infoForm.email.$error" role="alert">
+          			<div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+            			Please click above and enter a valid SMU email address.
+          			</div>
+        			</div>
+                </md-input-container>
+
+			    <md-input-container>
+			    <label>*Year in school</label>
+				<md-select ng-model="information.yearInSchool">
+					<md-option ng-repeat="year in yearInSchool" value="{{year.value}}" data-ng-model="information.yearInSchool">
+            			{{year.text}}
+         			</md-option>
+				</md-select>
+				</md-input-container>
+
+			    <md-input-container>
+			    <label>*Major (or likely major)</label>
+				<md-select ng-model="information.major">
+					<md-option ng-repeat="major in majors" value="{{$index}}">
+            			{{major}}
+         			</md-option>
+				</md-select>
+				</md-input-container>
+
+				<md-input-container class="md-block" ng-show="information.major==8">
+                  <label>If you indicated your major as other in the previous question, please list your majors</label>
+                  <input md-maxlength="30" maxlength="30" data-ng-model="information.otherMajor">
+               </md-input-container>
+
+				<md-input-container class="md-block" ng-show="information.major==9">
+                  <label>If you indicated a double major in the previous question, please list your majors</label>
+                  <input md-maxlength="30" maxlength="30" data-ng-model="information.otherMajor">
+               </md-input-container>
+          </div>
+		  <div data-ng-if="infoSection===2">
+		  		<strong>Using the scale below, click the option that best describes the extent to which you agree or disagree with each statement.</strong>
+				<br><br>
+				<span style="margin-left:600px">Definitely</span>  <span style="margin-left:23px">Mostly</span>  <span style="margin-left:33px">Mostly</span><span style="margin-left:33px">Definitely</span>
+				<span style="margin-left:600px">Disagree</span>  <span style="margin-left:20px">Disagree</span>  <span style="margin-left:20px">Agree</span><span style="margin-left:43px">Agree</span><br>
+				<!-- <div class="text"> Disagree  Disagree Agree    Agree </div> -->
+				<div>
+					<ul class="igrading">
+						<li style="list-style: none" ng-repeat="(initialQuesIndex,initialQues) in initialQues">
+							<div class="igrade-title"> {{initialQues}} <br></div>
+							<label>
+								<input type="radio" name="{{initialQuesIndex}}" value="1" ng-model="information.choices[$index]" ng-click="dynSave()" >
+							</label>
+							<label>
+								<input type="radio" name="{{initialQuesIndex}}" value="2" ng-model="information.choices[$index]" ng-click="dynSave()" >
+							</label>
+							<label>
+								<input type="radio" name="{{initialQuesIndex}}" value="3" ng-model="information.choices[$index]" ng-click="dynSave()" >
+							</label>
+							<label>
+								<input type="radio" name="{{initialQuesIndex}}" value="4" ng-model="information.choices[$index]" ng-click="dynSave()" >
+							</label><br>
+						</li>
+					</ul>
+					<br><br><br>
+				</div>
+				<md-input-container>
+			    <label>How did you learn about the Hart Center for Engineering Leadership?</label>
+				<md-select ng-model="information.hartsource">
+					<md-option ng-repeat="hartsource in hartsources" value="{{$index+1}}">
+            			{{hartsource}}
+         			 </md-option>
+				</md-select>
+				</md-input-container>
+		   </div>
+		  <div data-ng-if="infoSection===3">
+		    	<b>
+		  		Take a moment to think about leaders whom you personally know. These people could be mentors, bosses, coaches, teachers, parents, peers, siblings...the specific role or relationship to you is not important.
+		 		</b>
+			    <br><br>
+			    1. Out of all of the leaders you know, choose one person you believe to be a "Good Leader" and write this person's first name and last initial in the "Good Leader" blank below.
+			    <md-input-container class="md-block">
+                    <label>*Good Leader</label>
+                    <input required name="goodLeaderName" md-maxlength="30" maxlength="30" data-ng-model="information.goodLeaderName"
+                    ng-blur="dynSaveglpl()">
+                	<div ng-messages="infoForm.name.$error">
+         				<div ng-message="required">Please click above to input "Good Leader" name.</div>
+        			</div>
+                </md-input-container>
+			    2. Out of all the people you know, choose one person you believe to be a "Poor Leader" and write this person's first name and last initial in the "Poor Leader" blank below.
+			    <md-input-container class="md-block">
+                    <label>*Poor Leader</label>
+                    <input required name="poorLeaderName" md-maxlength="30" maxlength="30" data-ng-model="information.poorLeaderName"
+                    ng-blur="dynSaveglpl()">
+                	<div ng-messages="infoForm.name.$error">
+         				<div ng-message="required">Please click above to input "Poor Leader" name.</div>
+        			</div>
+                </md-input-container>
+               <strong>
+			    For the remainder of this survey, you will be presented with several series of leadership statements. For each series:
+			    <br><br>
+			    1. Indicate how well these statements describe <u>the <i>Good Leader</i> you identified above.</u><br>
+			    2. Indicate how well these statements describe <u>the <i>Poor Leader</i> you identified above.</u><br>
+			    3. Indicate how well these statements describe <u><i>Yourself.</i></u><br>
+		  </div>
+		  </fieldset>
+		</form>
+		<div class="navigation-button">
+		<button type="button" data-ng-hide="infoSection===1" data-ng-click="back()">Back</button>
+		<button type="button" data-ng-hide="infoSection===3" data-ng-click="next(infoSection)">Next</button>
+		<button type="button" data-ng-show="infoSection===3" data-ng-click="redirectSurvey()">Start Survey</button>
+	</div>
+	</div>
+
+</div>
+

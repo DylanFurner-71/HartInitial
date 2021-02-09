@@ -1,0 +1,170 @@
+
+<div ng-controller="AdminController as ctrl" ng-init="initadminhome()">
+	<h2 align="center">
+		<i>Welcome {{adminname}}</i>
+	</h2>
+	<br>
+	<br>
+
+	<div class="info-page">
+		<h2 align="center">Admin Options</h2>
+		<br>
+		<h4>
+			<a ng-click="RedirectAdmin()">View Student reports</a>
+		</h4>
+
+		<h4>
+			<a data-toggle="modal" data-target="#myModal">Upload new students</a>
+		</h4>
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content" ng-controller="AdminController">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" ng-click="status=0">&times;</button>
+						<h4 class="modal-title">
+							<b>Upload file to import</b>
+						</h4>
+					</div>
+					<div class="modal-body" ng-show="status==0">
+
+						<h5>
+							Select Graduate/Undergraduate
+							<select ng-model="study">
+								<option value="1">Undergraduate</option>
+								<option value="2">Graduate</option>
+								<option value="3">Ph.D. Student</option>
+
+							</select>
+						</h5>
+
+						<h5>
+							<i>Select Term and year of the student file you are uploading</i>
+						</h5>
+
+						<h5>
+							Term
+							<select ng-model="term">
+								<option value="Spring" selected="selected">Spring</option>
+								<option value="Fall">Fall</option>
+							</select>
+							Year
+							<select ng-model="termyear">
+								<option ng-repeat="year in years" ng-selected="{{$index==2}}">{{year}}</option>
+							</select>
+							Enter Group/batch name
+							<input type="text" ng-model="studentgroup" ng-change="{{(studentgroup&&study.length!=4)?disableupload=0:disableupload=1}}" required></input>
+
+						</h5>
+						<div></div>
+						<div class="navigation-button">
+							<input type="file" name="file" ng-disabled="disableupload==1" onchange="angular.element(this).scope().uploadFile(this.files)" />
+						</div>
+
+					</div>
+					<div ng-show="status==1" align="middle">
+						<img src="../styles/loading.gif" />
+					</div>
+					<div ng-show="status==2">
+						<h4 style="text-align: center; color: Green">
+							Uploaded successfully
+							</style>
+						</h4>
+					</div>
+					<div ng-show="status==3">
+						<h4 style="text-align: center; color: Red">
+							{{errorMessage}}
+							</style>
+						</h4>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="status=0">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<h4>
+			<a data-toggle="modal" data-target="#updatedate">View / Update De-Brief session date & Thankyou note</a>
+		</h4>
+
+		<div id="updatedate" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content" ng-controller="AdminController">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" ng-click="dateupdated=0">&times;</button>
+						<h4 class="modal-title">
+							<b>Add/Edit Debrief session date & Thankyou note</b>
+						</h4>
+						<div class="modal-body" ng-show="dateupdated==1" style="color: Green">
+							<b>De-briefdate & Thankyou note updated successfully</b>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="dateupdated=0">Close</button>
+							</div>
+							<div class="modal-body" ng-show="dateupdated==2" style="color: Red">
+								<b>Error! Please try again later</b>
+							</div>
+
+						</div>
+						<div ng-show="dateupdated==0">
+							<div class="modal-body">
+
+								<h5>
+									<i>Select Class/Year in school</i>
+								</h5>
+								<h5>
+									Term
+									<select ng-model="selectedterm">
+										<option ng-repeat="term in studterm" value={{term}}>{{term}}</option>
+									</select>
+
+									Class
+									<select ng-model="whichstudy" ng-change="loadbatches()">
+										<option value="2">Graduate</option>
+										<option value="1">Undergraduate</option>
+									</select>
+								</h5>
+								<h5>
+									Batch
+									<select ng-model="studgroup" ng-change="getallcurrentvalues()">
+										<option ng-repeat="group in grouplist" value="{{group}}">{{group}}</option>
+									</select>
+
+									Select Date
+									<input type="date" ng-model="Debriefdate" placeholder="yyyy-MM-dd" >
+								</h5>
+								<h5 style="color: green">Current De-brief session date:{{curdebriefdate|date:"MM/dd/yyyy"}}</h5>
+								<!-- <div>
+									Graduate -
+									<i>{{graddebriefdate}}</i>
+								</div>
+								<div>
+									Undergraduate -
+									<i>{{undergraddebriefdate}}</i>
+								</div> -->
+
+								<h5>
+									Add Thankyou Note
+									<textarea rows="10" cols="25" ng-model="thankyounotetext"></textarea>
+								</h5>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" ng-if="Debriefdate" ng-click="updateDebriefthankyounote()">Update</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="dateupdated=0">Close</button>
+								</div>
+								</h5>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h4>
+			<a ng-click="viewStatistics()">View Survey Result Statistics</a>
+		</h4>
+
+
+	</div>
+</div>

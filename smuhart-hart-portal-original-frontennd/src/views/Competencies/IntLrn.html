@@ -1,0 +1,419 @@
+<div ng-controller="saController as ctrl" ng-init="init()" style="font-family: Tahoma, Geneva, sans-serif">
+  <br>
+  <h1 style="text-align: center; font-weight: bold; color: #619f42">Intentional Learning</h1>
+  <h3 style="text-align: center; color: #354ca1; font-weight: bold;">"Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you
+    are doing or learning to do" - Pele</h3>
+  <br>
+  <br>
+  <div style="border: 1px solid #ddd; border-radius: 1px; width: 92%; margin-left: 4%; margin-bottom: 4%; padding: 1%;">
+    <span style="font-size: 24px; color: #cc0000; font-weight: bold"> Videos </span>
+    <br>
+    <br>
+
+    <div class="row" style="text-align: center;">
+
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-4">
+        <a href="https://www.youtube.com/watch?v=husjsW2ZrtE" target="_blank">
+                    <img src="../../styles/Images_comp/ILv1.JPG" height="200px" width="400px">
+                </a>
+        <br>
+        <br> Myshkin Ingawale creates a new machine to test blood. He describes his project failures which would then pave
+        the way for his innovation.
+        <br>
+        <button type="button" data-toggle="modal" data-target="#quiz1mod">Take Quiz</button>
+      </div>
+
+      <div class="col-sm-2"></div>
+
+      <div class="col-sm-4">
+        <a href="https://www.ted.com/talks/brian_cox_why_we_need_the_explorers?language=en" target="_blank">
+                    <img src="../../styles/Images_comp/ILv2.JPG" height="200px" width="400px">
+                </a>
+        <br>
+        <br> Science programs are usually the first to be on the chopping block when budget cuts are required. Despite that,
+        explorers in the science field are still able to make profound discoveries in the face of adversity.
+        <br>
+        <button type="button" data-toggle="modal" data-target="#quiz2mod">Take Quiz</button>
+      </div>
+
+      <div class="col-sm-1"></div>
+
+    </div>
+    <br>
+
+    <div class="row" style="text-align: center;">
+
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-4">
+        <a href="http://www.ted.com/talks/bunker_roy" target="_blank">
+                <img src="../../styles/Images_comp/ILv3.JPG" height="200px" width="380px">
+                </a>
+        <br>
+        <br> Julia Galef teaches us that perspective is everything and by changing lenses and challenging biases, we can
+        overcome our differences in search for the truth.
+        <br>
+        <button type="button" data-toggle="modal" data-target="#quiz3mod">Take Quiz</button>
+      </div>
+
+      <div class="col-sm-2"></div>
+
+      <div class="col-sm-4">
+        <a href="http://www.ted.com/talks/john_green_the_nerd_s_guide_to_learning_everything_online" target="_blank">
+                    <img data-ng-src="../../styles/Images_comp/ILv4.JPG" height="200px" width="400px">
+                </a>
+        <br>
+        <br> Author John Green, shares with us that learning does not stay in the classroom. For many, it takes place in
+        the comfort of our own homes behind a computer screen. <br>
+        <br>
+        <button type="button" data-toggle="modal" data-target="#quiz4mod">Take Quiz</button>
+      </div>
+
+    </div>
+
+    <div id="quiz1mod " class="modal fade " role="dialog ">
+      <div class="modal-dialog ">
+        <div class="modal-content ">
+          <div class="modal-header ">
+            <button type="button " class="close " data-dismiss="modal ">&times;</button>
+            <h4 class="modal-title ">
+              <b>Quiz on Video 1</b>
+            </h4>
+          </div>
+          <div class="modal-body ">
+            <b>1. How the ToucHB works is based off of what principle? </b>
+            <br>
+            <label>
+                            <input type="radio " name=q1 ng-value=2 ng-model="v1q1 ">
+                        </label> Pathology
+            <br>
+            <label>
+                            <input type="radio " name=q1 ng-value=1 ng-model="v1q1 ">
+                        </label> Hematology.
+            <br>
+            <label>
+                            <input type="radio " name=q1 ng-value=3 ng-model="v1q1 ">
+                        </label> Photoplethysmography.
+            <br>
+            <label>
+                            <input type="radio " name=q1 ng-value=4 ng-model="v1q1 ">
+                        </label> Paleohistopathology
+            <br>
+            <br>
+            <div ng-if="v1q1>1">
+              <font color="red">Incorrect!Try Again</font>
+            </div>
+            <div ng-if="v1q1==1">
+              <font color="Green">Right Answer!</font>
+            </div>
+            <br>
+            <br>
+            <b>2. How many deaths per minute are caused by undiagnosed anemia?  </b>
+            <br>
+            <label>
+                            <input type="radio" name=q1 ng-value=2 ng-model="v1q2">
+                        </label> 2
+            <br>
+            <label>
+                            <input type="radio" name=q1 ng-value=1 ng-model="v1q2">
+                        </label> 5
+            <br>
+            <label>
+                            <input type="radio" name=q1 ng-value=3 ng-model="v1q2">
+                        </label> 10
+            <br>
+            <label>
+                            <input type="radio" name=q1 ng-value=4 ng-model="v1q2">
+                        </label> 8
+            <br>
+            <br>
+            <div ng-if="v1q2>1">
+              <font color="red">Incorrect!Try Again</font>
+            </div>
+            <div ng-if="v1q2==1">
+              <font color="Green">Right Answer!</font>
+            </div>
+            <br>
+
+            <b> 3. What did Myshin have to consider when creating his invention? Why was it important to do this?[250 chars max] </b>
+            <textarea rows="8" cols="55" ng-model="v1_text" maxlength="250"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="saveresp(2,1,v1_text)" ng-disabled="v1q1!=1">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="status=0">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="quiz2mod" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">
+              <b>Quiz on Video 2</b>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <b> 1. What is the prime candidate for life in our solar system? </b>
+            <br>
+            <label>
+                            <input type="radio" name="q1" value=4 ng-model="v2q1">
+                        </label> Proxima B
+            <br>
+            <label>
+                            <input type="radio" name="q1" value=3 ng-model="v2q1">
+                        </label> Europa
+            <br>
+            <label>
+                            <input type="radio" name="q1" value=2 ng-model="v2q1">
+                        </label> Enceladus
+            <br>
+            <label>
+                            <input type="radio" name="q1" value=1 ng-model="v2q1">
+                        </label> Ceres
+            <br>
+            <br>
+            <div ng-if="v2q1>1">
+              <font color="red">Incorrect!Try Again</font>
+            </div>
+            <div ng-if="v2q1==1">
+              <font color="Green">Right Answer!</font>
+            </div>
+            <br>
+            <b>2. Who said this quote? "When I woke up just after dawn on September 28, 1928, I certainly didn't plan to revolutionize all medicine by discovering the world's first antibiotic</b>
+            <br>
+            <label>
+                            <input type="radio" name="q2" value=2 ng-model="v2q2">
+                        </label> Joseph Lister
+            <br>
+            <label>
+                            <input type="radio" name="q2" value=3 ng-model="v2q2">
+                        </label> Selman Waksman
+            <br>
+            <label>
+                            <input type="radio" name="q2" value=1 ng-model="v2q2">
+                        </label> Oscar Low
+            <br>
+            <label>
+                            <input type="radio" name="q2" value=4 ng-model="v2q2">
+                        </label> Sir Alexander Fleming
+            <br>
+            <br>
+            <div ng-if="v2q2>1">
+              <font color="red">Incorrect!Try Again</font>
+            </div>
+            <div ng-if="v2q2==1">
+              <font color="Green">Right Answer!</font>
+            </div>
+            <br>
+            <b>3. What was one of the key drivers that led to the development of the quantum theory?</b>
+            <br>
+            <label>
+                            <input type="radio" name="q3" value=2 ng-model="v2q3">
+                        </label> The fact that when one heats atoms up, they only emit light at very specific
+            colors.
+            <br>
+            <label>
+                            <input type="radio" name="q3" value=3 ng-model="v2q3">
+                        </label> That electrons stay static at cold temperatures.
+            <br>
+            <label>
+                            <input type="radio" name="q3" value=4 ng-model="v2q3">
+                        </label> The fact that when one heats atoms up, they disappear creating a black hole.
+            <br>
+            <label>
+                            <input type="radio" name="q3" value=1 ng-model="v2q3">
+                        </label> That without electrons, an atom can not exist in a stable condition.
+            <br>
+            <br>
+            <div ng-if="v2q3>1">
+              <font color="red">Incorrect!Try Again</font>
+            </div>
+            <div ng-if="v2q3==1">
+              <font color="Green">Right Answer!</font>
+            </div>
+            <br>
+            <br>
+            <b> We should never say our knowledge is finite; there is always more to learn.  Have there been times in class that you got so excited about learning something new that when you were home to research and learned something else you didn't know? Would you have learned that something new if not for that spark? </b>
+            <textarea rows="10" cols="55" ng-model="v2_text" maxlength="250"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="saveresp(2,2,v2_text)" ng-disabled="v2q1!=1||v2q2!=1||v2q3!=1">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="quiz3mod" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">
+              <b>Quiz on Video 3</b>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <b> 1. What did Bunker Roy and his village elders redefine?</b>
+            <br>
+            <label>
+                            <input type="radio" name="q1" value=2 ng-model="errormsg1">
+                        </label> Altruism
+            <br>
+            <label>
+                            <input type="radio" name="q1" value=3 ng-model="v3q1">
+                        </label> Expectations
+            <br>
+            <label>
+                            <input type="radio" name="q1" value=1 ng-model="v3q1">
+                        </label> Hard Work
+            <br>
+            <label>
+                            <input type="radio" name="q1" value=4 ng-model="v3q1">
+                        </label> Professionalism
+            <br>
+            <br>
+            <div ng-if="v3q1>1">
+              <font color="red">Incorrect!Try Again</font>
+            </div>
+            <div ng-if="v3q1==1">
+              <font color="Green">Right Answer!</font>
+            </div>
+            <br>
+            <b> 2. How many grandmothers were trained in Sierra Leone? </b>
+            <br>
+            <label>
+                            <input type="radio" name="q2" value=2 ng-model="v3q2">
+                        </label> 250
+            <br>
+            <label>
+                            <input type="radio" name="q2" value=1 ng-model="v3q2">
+                        </label> 150
+            <br>
+            <label>
+                            <input type="radio" name="q2" value=3 ng-model="v3q2">
+                        </label> 75
+            <br>
+            <label>
+                            <input type="radio" name="q2" value=4 ng-model="v3q2">
+                        </label> 100
+            <br>
+            <br>
+            <div ng-if="v3q2>1">
+              <font color="red">Incorrect!Try Again</font>
+            </div>
+            <div ng-if="v3q2==1">
+              <font color="Green">Right Answer!</font>
+            </div>
+            <br>
+            <b> 3.  Do you have any hobbies or any accomplished skills? Would they translate well to your studies or any upcoming projects?</b>
+            <textarea rows="10" cols="55" ng-model="v3_text" maxlength="250"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="saveresp(2,3,v3_text)" ng-disabled="v3q1!=1||v3q2!=1">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="status=0">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="quiz4mod" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">
+              <b>Quiz on Video 4</b>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <b>  1. So, does the city Agloe, NY exist?</b>
+            <br>
+            <label>
+                            <input type="radio" name="q1" value=2 ng-model="v4q1">
+                        </label> Yes, it exists. There is a sign for it and everything!
+            <br>
+            <label>
+                            <input type="radio" name="q1" value=1 ng-model="v4q1">
+                        </label> Yes, it's on Google Maps.
+            <br>
+            <label>
+                            <input type="radio" name="q1" value=3 ng-model="v4q1">
+                        </label> Technically, it doesn't exist.
+            <br>
+            <label>
+                            <input type="radio" name="q1" value=4 ng-model="v4q1">
+                        </label> General Drafting Company could not sue Rand McNally, so yes, it exists.
+            <br>
+            <br>
+            <div ng-if="v4q1>1">
+              <font color="red">Incorrect!Try Again</font>
+            </div>
+            <div ng-if="v4q1==1">
+              <font color="Green">Right Answer!</font>
+            </div>
+            <br>
+            <b> 2. What turned John Green from flunking student to a learner?</b>
+            <br>
+            <label>
+                            <input type="radio" name="q2" value=1 ng-model="v4q2">
+                        </label> He got over himself
+            <br>
+            <label>
+                            <input type="radio" name="q2" value=2 ng-model="v4q2">
+                        </label> He found himself in a community of learners.
+            <br>
+            <label>
+                            <input type="radio" name="q2" value=3 ng-model="v4q2">
+                        </label> He met a girl.
+            <br>
+            <label>
+                            <input type="radio" name="q2" value=4 ng-model="v4q2">
+                        </label> He had to or risk going to military school.
+            <br>
+            <br>
+            <div ng-if="v4q2>1">
+              <font color="red">Incorrect!Try Again</font>
+            </div>
+            <div ng-if="v4q2==1">
+              <font color="Green">Right Answer!</font>
+            </div>
+            <br>
+            <b> 3. Are you part of any online community? Do you find yourself learning something new each time you visit? What is your favorite part about these communities and why? </b>
+            <textarea rows="10" cols="55" ng-model="v4_text" maxlength="250"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="saveresp(2,4,v4_text)" ng-disabled="v4q1!=1||v4q2!=1">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="status=0">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <span style="font-size: 24px; color: #cc0000; font-weight: bold;"> Recommended Books </span>
+    <br>
+    <br>
+    <span style="font-size: 16px">
+            <li>Buckingham, Marcus, and Donald O. Clifton. Now, Discover Your Strengths. New York: Free, 2001.</li>
+            <li>Hawkins, Mike. Activating Your Ambition: A Guide to Coaching the Best out of Yourself and Others. Dallas, TX.: Brown Pub., 2009.</li>
+            <li>Pinkley, Robin L., and Gregory B. Northcraft. Get Paid What You're Worth: The Expert Negotiator's Guide to Salary and Compensation. New York: St. Martin's, 2000.</li>
+        </span>
+    <br>
+    <br>
+
+    <span style="font-size: 24px; color: #cc0000; font-weight: bold;"> Field Guide </span>
+    <br>
+    <br>
+    <a href="https://www.smu.edu/-/media/Site/Lyle/HCEL/FieldGuides/GRAD-Field-Guide-2016--FINAL-with-cover.ashx?la=en" target="_blank">
+            <img src="../../styles/fieldguide.JPG" style="margin-left: 5%" height="405px" width="315px">
+        </a>
+    <br>
+    <br>
+
+  </div>

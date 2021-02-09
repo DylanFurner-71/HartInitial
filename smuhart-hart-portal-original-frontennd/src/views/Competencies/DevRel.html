@@ -1,0 +1,223 @@
+<div ng-controller="drController as ctrl" ng-init="init()" style="font-family: Tahoma, Geneva, sans-serif">
+    <br>
+    <h1 style="text-align: center; font-weight: bold; color: #619f42"> Develop Relationships </h1>
+    <h3 style="text-align: center; color: #354ca1; font-weight: bold;"> â€œIntentional Learning is not accidental, and it is driven by a goal or need, even if you donâ€™t know what that is.â€� </h3>
+    <span style="float: right; margin-right: 5%; font-size: 16px;"> - Peter Freeth </span><br><br>
+
+    <div style="border:1px solid #ddd; border-radius:1px; width: 92%; margin-left: 4%; margin-bottom: 4%; padding: 1%;">
+        <span style="font-size: 24px; color: #cc0000; font-weight: bold"> Videos </span><br><br>
+
+        <div class="row" style="text-align: center;">
+
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-4">
+            <a href="https://www.ted.com/talks/kare_anderson_be_an_opportunity_maker?language=en" target="_blank">
+            <img data-ng-src="../../styles/Images_comp/DRv1.jpg" height="200px" width="400px"> </a><br><br>
+            Kare Anderson talks about finding shared values with other people and acting on said values to change the world. <br><br>
+            <button type="button" data-ng-click="ctrl.drv1()"> Take Quiz </button>
+            </div>
+
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-4">
+            <a href="http://www.ted.com/talks/drew_dudley_everyday_leadership" target="_blank">
+            <img data-ng-src="../../styles/Images_comp/DRv2.jpg" height="200px" width="400px"> </a><br><br>
+            Leadership is not just something you do, it's something you are. <br>
+            <button type="button" data-ng-click="ctrl.drv2()"> Take Quiz </button>
+            </div>
+
+            <div class="col-sm-1"></div>
+
+        </div><br>
+
+        <div class="row" style="text-align: center;">
+
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-4">
+            <a href="https://www.ted.com/talks/linda_hill_how_to_manage_for_collective_creativity" target="_blank">
+            <img data-ng-src="../../styles/Images_comp/DRv3.jpg" height="200px" width="380px"> </a><br><br>
+            Linda Hill explains how companies like Google and Pixar created workplace environments engineered for productivity and success. <br>
+            <button type="button" data-ng-click="ctrl.drv3()"> Take Quiz </button>
+            </div>
+
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-4">
+            <br><br>
+            <a href="https://www.ted.com/talks/tim_leberecht_4_ways_to_build_a_human_company_in_the_age_of_machines" target="_blank">
+            <img data-ng-src="../../styles/Images_comp/DRv4.jpg" height="200px" width="400px"> </a><br><br>
+            Tim Leberecht tells us how we can improve our companies and make them more beautiful and human. <br><br>
+            <button type="button" data-ng-click="ctrl.drv4()"> Take Quiz </button>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <div ng-if="ctrl.videoquiz==1 || ctrl.videoquiz==2 || ctrl.videoquiz==3 || ctrl.videoquiz==4"
+        style="font-size: 16px; margin-left: 40px">
+        <span style="font-size: 24px; color: #cc0000; font-weight: bold; margin-left: 0px"> Quiz on Video #{{ctrl.videoquiz}}
+        </span><br>
+            <div ng-if="ctrl.videoquiz==1">
+                <b> 1. What interest did an actress, an architect, and an ex-con all share? </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Fitness <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Cooking <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Affordable housing <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Public art <br><br>
+                <b> 2. Leaders as opportunity-makers should do what three things? </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Become pattern-seekers, get involved in different worlds to gain credibility and find those patterns, and communicate with others on those shared interests. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Focus on the people they know, donâ€™t bother to work with others, and try to lead with what has worked for them in the past. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Find others with shared interests, persuade others in a current group to join in a project, and then branch out to other groups. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Work with people in a community foreign to you, find patterns between your two worlds, and try to take those patterns back to your community. <br><br>
+                <b> 3. Creating and maintaining relationships should not be seen as a chore or an obligation, it is part of being a leader. What are ways that you can, not only create, but maintain those relationships and contacts? </b>
+                [free-text answer]
+            </div>
+
+            <div ng-if="ctrl.videoquiz==2">
+                <b> 1. For what charity was Drew handing out lollipops? </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> CollegeSpring <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Kicking 4 Hunger <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Kartavya <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Students Fighting Cystic Fibrosis <br><br>
+                <b> 2. How should we view leadership? </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> That not everyone is cut out for it. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> That it is about changing the world. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> That we should not expect to see it everyday. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> That it is beyond us. <br><br>
+                <b> 3. Have you ever experienced a lollipop moment that you felt helped create the person you are today? </b>
+                [free-text answer]
+            </div>
+
+            <div ng-if="ctrl.videoquiz==3">
+                <b> 1. When Hill visited Pixar for the first time, Pixar was working on:  </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> WALL-E <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> The Incredibles <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Cars <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Ratatouille <br><br>
+                <b> 2. __________ is the secret sauce. </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Collaboration <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Leadership <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Understanding <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Vision <br><br>
+                <b> 3. What did Vineet tell his leaders that turned his company into a global dynamo? </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> As leaders, they should be directing the flow of ideas more. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> They needed to allow only one department to be innovative. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> It was time for them to rethink what what they were supposed to do as leaders. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> None of these are correct. <br><br>
+                <b> 4. Some might say that a leader that steps back so others can create is really not doing much of anything. How is this person wrong? </b>
+                [free-text answer]
+            </div>
+
+            <div ng-if="ctrl.videoquiz==4">
+                <b> 1. What is beauty for Tim Leberecht? </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Promise of happiness. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> A goal from Messi. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Kiss from Keira Knightley. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Motherâ€™s homemade cooking. <br><br>
+                <b> 2. What is something Tim Leberecht would not say when it comes to the importance of creating intimacy? </b><br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> Creating intimacy allows others to take down invisible barriers and create lasting bonds. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> How employees feel about their workplace depends on their relationships with their coworkers. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> If there is intimacy, people will be more likely to care more about their job. <br>
+                <label>
+                <input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+                </label> It is not necessary to create intimacy so long as you know the right person and that is all you need these days. <br><br>
+                <b> 3. Do you agree with what Tim Leberecht believes about making a more human-driven company? Why or why not? </b>
+                [free-text answer] <br><br>
+                <b> 4. Was this video helpful in your leadership development journey? </b>
+                [free-text answer]
+            </div>
+
+            <br> <button type="button" data-ng-click="ctrl.submit()" style="margin-left: 40%; width: 10%"> Submit </button>
+        </div>
+
+        <br><br>
+
+            <span style="font-size: 24px; color: #cc0000; font-weight: bold;"> Recommended Books </span><br><br>
+            <span style="font-size: 16px">
+            <li> Buckingham, Marcus, and Donald O. Clifton. Now, Discover Your Strengths. New York: Free, 2001. </li>
+            <li> Hawkins, Mike. Activating Your Ambition: A Guide to Coaching the Best out of Yourself and Others. Dallas, TX.: Brown Pub., 2009. </li>
+            <li> Pinkley, Robin L., and Gregory B. Northcraft. Get Paid What You're Worth: The Expert Negotiator's Guide to Salary and Compensation. New York: St. Martin's, 2000. </li>
+            </span><br><br>
+
+            <span style="font-size: 24px; color: #cc0000; font-weight: bold;"> File Guide </span><br><br>
+            <a href="https://www.smu.edu/-/media/Site/Lyle/HCEL/FieldGuides/GRAD-Field-Guide-2016--FINAL-with-cover.ashx?la=en" target="_blank">
+            <img data-ng-src="../../styles/fieldguide.JPG" style="margin-left: 5%" height="405px" width="315px"> </a><br><br>
+
+</div>
+
+</div>
+
+
+

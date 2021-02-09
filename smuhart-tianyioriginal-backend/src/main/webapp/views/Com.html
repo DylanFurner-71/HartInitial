@@ -1,0 +1,252 @@
+<div ng-controller="coController as ctrl" ng-init="init()" style="font-family: Tahoma, Geneva, sans-serif">
+	<br>
+	<h1 style="text-align: center; font-weight: bold; color: #619f42"> Communicating Effectively </h1>
+	<h3 style="text-align: center; color: #354ca1; font-weight: bold;"> “Intentional Learning is not accidental, and it is driven by a goal or need, even if you don’t know what that is.” </h3>
+	<span style="float: right; margin-right: 5%; font-size: 16px;"> - Peter Freeth </span><br><br>
+
+	<div style="border:1px solid #ddd; border-radius:1px; width: 92%; margin-left: 4%; margin-bottom: 4%; padding: 1%;">
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold"> Videos </span><br><br>
+
+		<div class="row" style="text-align: center;">
+
+			<div class="col-sm-4">
+				<a href="https://www.ted.com/talks/roger_antonsen_math_is_the_hidden_secret_to_understanding_the_world" target="_blank">
+			<img src="../styles/COv1.jpg" height="200px" width="400px"> </a><br><br> Roger Antonsen teaches us that when communicating
+				ideas, you may need to change your perspective or lens. <br><br>
+				<button type="button" data-ng-click="ctrl.cov1()"> Take Quiz </button>
+			</div>
+
+			<div class="col-sm-4">
+				<a href="https://www.ted.com/talks/melissa_marshall_talk_nerdy_to_me?language=en" target="_blank">
+			<img src="../styles/COv2.jpg" height="200px" width="400px"> </a><br><br> People are interested in what you have to
+				say and what you are working on at the moment. <br>
+				<button type="button" data-ng-click="ctrl.cov2()"> Take Quiz </button>
+			</div>
+
+			<div class="col-sm-4">
+				<a href="https://www.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen" target="_blank">
+			<img src="../styles/COv3.jpg" height="200px" width="380px"> </a><br><br> Julian Treasure teaches us how to speak with
+				authenticity and encourage coaxes others to listen. <br>
+				<button type="button" data-ng-click="ctrl.cov3()"> Take Quiz </button>
+			</div>
+
+			<br>
+			<div class="col-sm-1"></div>
+
+			<div class="col-sm-4">
+				<br><br>
+				<a href="http://www.ted.com/talks/ze_frank_s_web_playroom" target="_blank">
+			<img src="../styles/COv4.jpg" height="200px" width="400px"> </a><br><br> The act of creation brings people together.
+				<br><br>
+				<button type="button" data-ng-click="ctrl.cov4()"> Take Quiz </button>
+			</div>
+
+			<br>
+			<div class="col-sm-2"></div>
+
+			<div class="col-sm-4">
+				<br><br>
+				<a href="https://www.ted.com/talks/celeste_headlee_10_ways_to_have_a_better_conversation" target="_blank">
+			<img src="../styles/COv5.jpg" height="200px" width="400px"> </a><br><br> Celeste Headlee shows us that there is so
+				much more to gain from a conversation. <br>
+				<button type="button" data-ng-click="ctrl.cov5()"> Take Quiz </button>
+			</div>
+
+		</div>
+
+		<br><br>
+
+		<div ng-if="ctrl.videoquiz==1 || ctrl.videoquiz==2 || ctrl.videoquiz==3 || ctrl.videoquiz==4 || ctrl.videoquiz==5" style="font-size: 16px; margin-left: 40px">
+			<span style="font-size: 24px; color: #cc0000; font-weight: bold; margin-left: 0px"> Quiz on Video #{{ctrl.videoquiz}}
+		</span><br>
+			<div ng-if="ctrl.videoquiz==1">
+				<b> 1. What does Antonsen believe is fundamental for human beings? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Compromise <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Beating a topic to death <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Changing perspective <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Pursuit of happiness <br><br>
+				<b> 2. What is the first equation that Antonsen presents to the audience? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> x + x = 2 • x <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> 2x = x - x <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> x^2 = x + x <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> x/2 = x + x <br><br>
+				<b> 3. Why is it important to change perspective? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> To see something differently. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> To be empathetic. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> To gain better understanding. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> All of the above. <br><br>
+				<b> 4. If you have trouble communicating an issue to others, treat this is as a learning opportunity. Think of a time where you repeated a statement or question several times where the other person did not understand you. What could you have said differently to enable understanding? Do you think this is something that will requires extra patience or work from you? Why? </b>				[free-text answer] <br><br>
+				<b> 5. Do you feel that this video has been helpful in your leadership development journey? </b> [free-text answer] <br><br>
+			</div>
+
+			<div ng-if="ctrl.videoquiz==2">
+				<b> 1. What does Marshall tell her audience is a barrier to understanding ideas? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Too many adjectives <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Closed-mind <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Jargon <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Redundancy <br><br>
+				<b> 2. Do you agree that Melissa Marshall and others like her are important in helping engineers make their ideas become reality? Why is it important to include others outside of your team in regards to your work? </b>				[free-text answer]
+			</div>
+
+			<div ng-if="ctrl.videoquiz==3">
+				<b> 1. Which word is not part of Treasure’s four cornerstones of speaking? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Authenticity <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Love <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Humour <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Integrity <br><br>
+				<b> 2. According to Treasure, it is difficult to listen to a person who speaks in a monotone voice. </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> True <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> False <br><br>
+				<b> 3. If you want your words to carry weight, from where should you speak? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Nose <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Throat <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Belly <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Chest <br><br>
+				<b> 4. Julian believes that understanding could be the norm if we speak powerfully to others who listen intently.  Do you have any bad speaking habits that you need to work on? What are they and how have they affected your work? </b>				[free-text answer] <br><br>
+			</div>
+
+			<div ng-if="ctrl.videoquiz==4">
+				<b> 1. What was the project called that changed the way Ze thought about connecting to people all because of a piece of audio? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Bubba <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Ray <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Jonas <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Tyler <br><br>
+				<b> 2. How long did it take for Ze’s viewers to find the creator of that piece of audio? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> One week <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> 4 days <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Two weeks <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> 8 days <br><br>
+				<b> 4. Your creation and the way you share it can help bring people together/create a social impact, if it’s communicated effectively. Someone can come up with a great idea, share it, but it never takes off. Someone can come up with the same idea and share it at the same time, and it goes viral. Why did one succeed and one not? </b>				[free-text answer]
+			</div>
+
+			<div ng-if="ctrl.videoquiz==5">
+				<b> 1. Why do we not listen to each other? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> We are busy. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> We like to talk. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> We are simply not interested in other people. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> We like to ignore people. <br><br>
+				<b> 2. Which of these is not one of Headlee’s 10 rules? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Listen. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Don’t pontificate. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Allow yourself to go on tangents. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Be brief. <br><br>
+				<b> 3. What are things you should do in a conversation? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Equate your experience with theirs. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Be prepared to reply. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Use a lot of details. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Assume you have something to learn. <br><br>
+				<b> 4. Why is it that we need to be reminded, or even taught, how to hold a conversation in this day and age? </b> [free-text
+				answer]
+			</div>
+			<br> <button type="button" data-ng-click="ctrl.submit()" style="margin-left: 40%; width: 10%"> Submit </button>
+		</div>
+
+
+		<br><br>
+
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> Recommended Books </span><br><br>
+		<span style="font-size: 16px">
+			<li> Buckingham, Marcus, and Donald O. Clifton. Now, Discover Your Strengths. New York: Free, 2001. </li>
+			<li> Hawkins, Mike. Activating Your Ambition: A Guide to Coaching the Best out of Yourself and Others. Dallas, TX.: Brown Pub., 2009. </li>
+			<li> Pinkley, Robin L., and Gregory B. Northcraft. Get Paid What You're Worth: The Expert Negotiator's Guide to Salary and Compensation. New York: St. Martin's, 2000. </li>
+			</span><br><br>
+
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> File Guide </span><br><br>
+		<a href="https://www.smu.edu/-/media/Site/Lyle/HCEL/FieldGuides/GRAD-Field-Guide-2016--FINAL-with-cover.ashx?la=en" target="_blank">
+			<img src="../styles/fieldguide.JPG" style="margin-left: 5%" height="405px" width="315px"> </a><br><br>
+
+	</div>
+
+</div>

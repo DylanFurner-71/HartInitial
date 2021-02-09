@@ -1,0 +1,73 @@
+<div ng-controller="AdminController as ctrl" ng-init="init()">
+  <br>
+  <h3>
+    <I>
+      <b>View Overall Survey Report</b>
+    </I>
+  </h3>
+  <br>
+  <table>
+    <tr>
+      <td colspan=1 width=364.8>
+        <md-input-container>
+          <label font-size="35">Select batch</label>
+          <md-select ng-model="batch" ng-change="getstats()">
+            <md-option ng-repeat="batch in batchlist"> {{batch}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </td>
+    </tr>
+  </table>
+  <table style="width: 55%;">
+    <tr>
+      <td width=800>
+        <md-input-container>
+          <label>Filter by Grad/Undergrad</label>
+          <md-select ng-model="stud" ng-change="getstats()">
+            <md-option ng-repeat="stud in study" value="{{stud.value}}"> {{stud.text}} </md-option>
+          </md-select>
+        </md-input-container>
+      </td>
+      <td width=800>
+        <md-input-container>
+          <label>Filter by Class</label>
+          <md-select ng-model="year" ng-change="getstats()">
+            <md-option ng-repeat="year in yearInSchool" value="{{year.value}}"> {{year.text}} </md-option>
+          </md-select>
+        </md-input-container>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <div>
+    <h4><b><i>Collective values obtained for each competency: sorted highest to lowest:</h4>
+  </div>
+  <svg width="900" height="700" style="overflow: hidden;">
+    <rect x="115" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+    <rect x="255" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+    <rect x="395" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+    <rect x="535" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+    <rect x="675" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+    <rect x="815" y="71" width="1" height="527" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+    <rect x="115" y="593" width="700" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+    <g ng-repeat="ele in bgElements">
+      <rect x="116" ng-attr-y="{{ele.y}}" ng-attr-width="{{ele.width}}" height="33" stroke="none" stroke-width="0" ng-attr-fill="{{ele.color}}"></rect>
+      <text text-anchor="start" x="125" ng-attr-y="{{ele.y+20}}" font-family="Arial" font-size="13" font-weight="bold" stroke="none" stroke-width="0" fill="white">{{ele.text}}</text>
+    </g>
+    <rect x="253" y="108" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+    <rect x="277" y="170" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+    <rect x="413" y="231" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+    <rect x="446" y="293" width="0" height="1" stroke="none" stroke-width="0" fill="#999999"></rect>
+    <text text-anchor="middle" x="115" y="620" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">5</text>
+    <text text-anchor="middle" x="255" y="620" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">8</text>
+    <text text-anchor="middle" x="395" y="620" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">11</text>
+    <text text-anchor="middle" x="535" y="620" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">14</text>
+    <text text-anchor="middle" x="675" y="620" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">17</text>
+    <text text-anchor="middle" x="815" y="620" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">20</text>
+    <rect x="233" y="101.5" width="16" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+    <rect x="258" y="163.5" width="15" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+    <rect x="394" y="224.5" width="15" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+    <rect x="430" y="286.5" width="12" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+  </svg>
+</div>

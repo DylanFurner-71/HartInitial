@@ -1,0 +1,92 @@
+<div ng-controller="spController as ctrl" ng-init="init()" style="font-family: Tahoma, Geneva, sans-serif">
+	<br>
+	<h1 style="text-align: center; font-weight: bold; color: #619f42"> Strategic Perspective </h1>
+	<h3 style="text-align: center; color: #354ca1; font-weight: bold;"> “Intentional Learning is not accidental, and it is driven by a goal or need, even if you don’t know what that is.” </h3>
+	<span style="float: right; margin-right: 5%; font-size: 16px;"> - Peter Freeth </span><br><br>
+
+	<div style="border:1px solid #ddd; border-radius:1px; width: 92%; margin-left: 4%; margin-bottom: 4%; padding: 1%;">
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold"> Videos </span><br><br>
+
+		<div class="row" style="text-align: center;">
+
+			<div class="col-sm-4"></div>
+
+			<div class="col-sm-4">
+				<a href="https://www.ted.com/talks/astro_teller_the_unexpected_benefit_of_celebrating_failure" target="_blank">
+			<img src="../styles/SPv1.jpg" height="200px" width="400px"> </a><br><br> Sometimes admitting failure is the best strategic
+				move. <br><br>
+				<button type="button" data-ng-click="ctrl.spv1()"> Take Quiz </button>
+			</div>
+
+			<div class="col-sm-4"></div>
+
+		</div>
+
+		<br><br>
+
+		<div ng-if="ctrl.videoquiz==1" style="font-size: 16px; margin-left: 40px">
+			<span style="font-size: 24px; color: #cc0000; font-weight: bold; margin-left: 0px"> Quiz on Video #{{ctrl.videoquiz}}
+		</span><br>
+			<div ng-if="ctrl.videoquiz==1">
+				<b> 1. What is the term Teller uses when a project simply will not make the final stage? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Scrap <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Nix <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Scrub <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Kill <br><br>
+				<b> 2. How many miles have X’s cars self-driven? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> More than 1.4 million miles <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> More than 2 million miles <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Less than 1 million miles <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> More than 4 million miles <br><br>
+				<b> 3. Why do they work hard at X? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> To not get fired. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> To make it safe to fail. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> To avoid accidents. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> To avoid failing. <br><br>
+				<b> 4. As a leader, there will be many hats you will need to wear and be able to switch between them all. Sometimes you will need to think creatively, or optimistically, or realistically, etc.. How often do you think strategically, all the way to the desired end result? How can you practice this skill more? </b>				[free-text answer] <br><br>
+				<b> 5. Do you feel this video helped you in your leadership development journey? </b> [free-text answer]
+			</div>
+
+			<br> <button type="button" data-ng-click="ctrl.submit()" style="margin-left: 40%; width: 10%"> Submit </button>
+		</div>
+
+		<br><br>
+
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> Recommended Books </span><br><br>
+		<span style="font-size: 16px">
+			<li> Buckingham, Marcus, and Donald O. Clifton. Now, Discover Your Strengths. New York: Free, 2001. </li>
+			<li> Hawkins, Mike. Activating Your Ambition: A Guide to Coaching the Best out of Yourself and Others. Dallas, TX.: Brown Pub., 2009. </li>
+			<li> Pinkley, Robin L., and Gregory B. Northcraft. Get Paid What You're Worth: The Expert Negotiator's Guide to Salary and Compensation. New York: St. Martin's, 2000. </li>
+			</span><br><br>
+
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> File Guide </span><br><br>
+		<a href="https://www.smu.edu/-/media/Site/Lyle/HCEL/FieldGuides/GRAD-Field-Guide-2016--FINAL-with-cover.ashx?la=en" target="_blank">
+			<img src="../styles/fieldguide.JPG" style="margin-left: 5%" height="405px" width="315px"> </a><br><br>
+
+	</div>
+
+</div>

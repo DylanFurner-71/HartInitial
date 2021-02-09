@@ -1,0 +1,131 @@
+<div ng-controller="ceController as ctrl" ng-init="init()" style="font-family: Tahoma, Geneva, sans-serif">
+	<br>
+	<h1 style="text-align: center; font-weight: bold; color: #619f42"> Champions Effective Processes </h1>
+	<h3 style="text-align: center; color: #354ca1; font-weight: bold;"> “Intentional Learning is not accidental, and it is driven by a goal or need, even if you don’t know what that is.” </h3>
+	<span style="float: right; margin-right: 5%; font-size: 16px;"> - Peter Freeth </span><br><br>
+
+	<div style="border:1px solid #ddd; border-radius:1px; width: 92%; margin-left: 4%; margin-bottom: 4%; padding: 1%;">
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold"> Videos </span><br><br>
+
+		<div class="row" style="text-align: center;">
+
+    		<div class="col-sm-4">
+			<a href="http://www.ted.com/talks/iqbal_quadir_says_mobiles_fight_poverty.html" target="_blank">
+			<img data-ng-src="../styles/CEv1.jpg" height="200px" width="400px"> </a><br><br>
+			Iqbal Quadir shows us how leaders champion effective processes that can change communities. <br><br>
+			<button type="button" data-ng-click="ctrl.cev1()"> Take Quiz </button>
+    		</div>
+
+    		<div class="col-sm-4"> </div>
+
+   		 	<div class="col-sm-4">
+    		<a href=" http://www.ted.com/talks/cat_laine_engineering_a_better_life_for_all" target="_blank">
+			<img data-ng-src="../styles/CEv2.jpg" height="200px" width="400px"> </a><br><br>
+			In this video, necessity is the mother of invention. <br>
+			<button type="button" data-ng-click="ctrl.cev2()"> Take Quiz </button>
+   		 	</div>
+
+		</div>
+
+		<br><br>
+
+		<div ng-if="ctrl.videoquiz==1 || ctrl.videoquiz==2" style="font-size: 16px; margin-left: 40px">
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold; margin-left: 0px"> Quiz on Video #{{ctrl.videoquiz}}
+		</span><br>
+			<div ng-if="ctrl.videoquiz==1">
+				<b> In Bengali, what does Gonophone mean? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Never Phone <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Their Phone <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> God’s Phone <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> People’s phone <br><br>
+				<b> 2. What thought did Quadir have when began his venture to to fight poverty - connectivity is? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Productivity <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Idle work <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Reciprocity <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> The key <br><br>
+				<b> 3. We can implement a system that can boost several communities located either in the city or in the country and connect 3.5 million people. What is stopping us from doing this everywhere? What are obstacles that you can see being in your path in the future? </b>
+				[free-text answer]
+			</div>
+
+			<div ng-if="ctrl.videoquiz==2">
+				<b> 1. What is it that she and her organization are trying to do for the rural poor? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Help develop small business in poor communities to create solutions within their community and within their own economies. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Help the rural poor network outside of their city and run fundraises to bring in more money. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Help communities find solutions elsewhere and have those products imported. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Help communities by finding solutions to their problems and then invoicing them. <br><br>
+				<b> 2. Which one is NOT one of the cornerstones for her organization’s initiative? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Local talent <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Local materials <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Local businesses <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Local escrow <br><br>
+				<b> 3. What is the Greek myth that Cat uses as an analogy throughout her presentation? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Icarus <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Theseus <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Tantalus <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Perseus <br><br>
+				<b> 4. In order to champion an effective process, you will need to do a lot of work and research. What all would you need to do when preparing a proposal for a new process that is cost and time efficient? How would you sell it? </b>
+				[free-text answer]
+			</div>
+
+			<br> <button type="button" data-ng-click="ctrl.submit()" style="margin-left: 40%; width: 10%"> Submit </button>
+		</div>
+
+		<br><br>
+
+			<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> Recommended Books </span><br><br>
+			<span style="font-size: 16px">
+			<li> Buckingham, Marcus, and Donald O. Clifton. Now, Discover Your Strengths. New York: Free, 2001. </li>
+			<li> Hawkins, Mike. Activating Your Ambition: A Guide to Coaching the Best out of Yourself and Others. Dallas, TX.: Brown Pub., 2009. </li>
+			<li> Pinkley, Robin L., and Gregory B. Northcraft. Get Paid What You're Worth: The Expert Negotiator's Guide to Salary and Compensation. New York: St. Martin's, 2000. </li>
+			</span><br><br>
+
+			<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> File Guide </span><br><br>
+			<a href="https://www.smu.edu/-/media/Site/Lyle/HCEL/FieldGuides/GRAD-Field-Guide-2016--FINAL-with-cover.ashx?la=en" target="_blank">
+			<img data-ng-src="../styles/fieldguide.JPG" style="margin-left: 5%" height="405px" width="315px"> </a><br><br>
+
+</div>
+
+</div>
+
+
+

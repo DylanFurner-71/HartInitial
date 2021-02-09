@@ -1,0 +1,204 @@
+<div ng-controller="AdminController as ctrl" ng-init="init()">
+  <br>
+  <h3>
+  <I>
+  <b>View Student Survey Reports</b>
+  </I>
+  </h3>
+  <br>
+  <table>
+    <tr>
+      <td colspan=1 width=364.8>
+        <md-input-container>
+          <label font-size="35">Select batch</label>
+          <md-select ng-model="batch" ng-change="loadstudents(batch)">
+            <md-option ng-repeat="batch in batchlist"> {{batch}} </md-option>
+          </md-select>
+        </md-input-container>
+      </td>
+    </tr>
+  </table>
+  <div ng-show="students.length">
+    <h4>
+    <i>
+    <b>Listing all students from {{batch}}</b> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp No. of Records : {{numberofrecords}}
+    </i>
+    </h4>
+    <table style="width: 55%;">
+      <tr>
+        <td width=800>
+          <md-input-container class="md-block"> <label>
+            <b>Search by ID:</b>
+            </label> <input maxlength="8" ng-model="searchText.smuId" ng-change="setPage(1)"> </md-input-container>
+          </td>
+          <td width=800>
+            <md-input-container class="md-block"> <label>Search by Name:</label> <input ng-model="searchText.name" ng-change="setPage(1)"> </md-input-container>
+          </td>
+          <td width=800>
+            <md-input-container> <label>Filter by Competency1</label> <md-select ng-model="searchText.competency1" ng-change="setPage(1)"> <md-option ng-repeat="comp in competencyfilter" value="{{comp.value}}"> {{comp.text}} </md-option> </md-select> </md-input-container>
+          </td>
+          <td width=800>
+            <md-input-container> <label>Filter by Grad/Undergrad</label>
+            <md-select ng-model="searchText.study" ng-change="setPage(1)">
+            <md-option ng-repeat="stud in study" value="{{stud.value}}"> {{stud.text}} </md-option> </md-select> </md-input-container>
+          </td>
+        </tr>
+        <tr>
+          <td width=800>
+            <md-input-container> <label>Filter by Class</label> <md-select ng-model="searchText.yearInSchool" ng-change="setPage(1)"> <md-option ng-repeat="year in yearInSchool" value="{{year.value}}"> {{year.text}} </md-option> </md-select> </md-input-container>
+          </td>
+          <td width=800>
+            <md-input-container> <label>Filter by Gender</label> <md-select ng-model="searchText.gender" ng-change="setPage(1)"> <md-option ng-repeat="gen in gender" value="{{gen.value}}"> {{gen.text}} </md-option> </md-select> </md-input-container>
+          </td>
+          <td width=800>
+            <md-input-container> <label>Filter by Competency2</label> <md-select ng-model="searchText.competency2" ng-change="setPage(1)"> <md-option ng-repeat="comp in competencyfilter" value="{{comp.value}}"> {{comp.text}} </md-option> </md-select> </md-input-container>
+          </td>
+          <td width=800>
+            <md-input-container> <label>Filter by batch/Group</label>
+            <md-select ng-model="searchText.studentgroup" ng-change="setPage(1)">
+            <md-option ng-repeat="bat in studentgroup" value="{{bat=='All' ?null:bat}}"> {{bat}} </md-option> </md-select> </md-input-container>
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2 width=800>
+            <md-input-container> <label>Filter by Survey Status</label> <md-select ng-model="searchText.surveyStatus" ng-change="setPage(1)"> <md-option ng-repeat="status in compstat" value="{{status.value}}"> {{status.text}} </md-option> </md-select> </md-input-container>
+          </td>
+          <td colspan=2>
+            <a download="Students.xlsx" ng-attr-href="getStudents.json?surveyStatus={{searchText.surveyStatus}}"><h5>Select survey status and click here to export student details</h5></a>
+          </td>
+        </tr>
+        <tr><td colspan=4 width=800><md-input-container><label>Filter based on print status</label>
+        <md-select ng-model="searchText.print" ng-change="setPage(1)">
+        <md-option ng-repeat="printstat in printstatus" value="{{printstat.value}}"> {{printstat.text}} </md-option>
+        </md-select> </md-input-container>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <I>* Click on SMU ID to view individual reports</I>
+  <br>
+  <i>* Records marked 'P' are printed.</i>
+  <br>
+  <table id="searchTextResults" style="width: 95%;" border="2" cellpadding="20" align="center" class="table table-striped">
+    <tbody>
+      <tr style="height: 60.6px;">
+        <th style="width: 100px; text-align: center; height: 60.6px;">
+          <em>Select</em>
+          <br />
+          <input type="checkbox" ng-click="checkAll(items)" ng-model="checkAllChecked" />
+        </th>
+        <th style="width: 250px; text-align: center; height: 60.6px;">
+          <em>Name</em>
+        </th>
+        <th style="width: 250px; text-align: center; height: 60.6px;">
+          <em>SMU ID</em>
+        </th>
+        <th style="width: 250px; text-align: center; height: 60.6px;">
+          <em>Class</em>
+        </th>
+        <th style="width: 250px; text-align: center; height: 60.6px;">
+          <em>Survey Completion Status</em>
+        </th>
+        <th style="width: 250px; text-align: center; height: 60.6px;">
+          <em>Email</em>
+        </th>
+        <th style="width: 250px; text-align: center; height: 60.6px;">
+          <em>Study</em>
+        </th>
+        <th style="width: 250px; text-align: center; height: 60.6px;">
+          <em>batch</em>
+        </th>
+        <th style="width: 250px; text-align: center; height: 60.6px;">
+          <em>Selected competency1</em>
+        </th>
+        <th style="width: 250px; text-align: center; height: 60.6px;">
+          <em>Selected competency2</em>
+        </th>
+        <!-- <th style="width: 250px; text-align: center; height: 60.6px;">
+            <em>Phone Number</em>
+        </th> -->
+        <th style="width: 250px; text-align: center; height: 60.6px;">
+          <em>Enable student to view report</em>
+          <input type="checkbox" ng-click="allowAll(items)" ng-model="allowViewAllChecked" />
+        </th>
+        <th style="width: 250px; text-align: center; height: 60.6px;">
+          <em>Highest Competency</em>
+        </th>
+        <th style="width: 250px; text-align: center; height: 60.6px;">
+          <em>Lowest Competency</em>
+        </th>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr ng-repeat="student in items" style="height: 21px;">
+        <td style="width: 100px; height: 21px; text-align: center;">
+          <input type="checkbox" ng-disabled="student.surveyStatus < 3" ng-attr-title="{{student.surveyStatus < 3 ? 'Survey Not Completed' : ''}}" ng-model="student.selected" />
+          <br><span ng-show="student.print==1">[P]</span>
+        </td>
+        <td style="width: 250px; height: 21px; text-align: center;">{{student.name}}</td>
+        <td style="width: 250px; height: 21px; text-align: center;">
+          <a ng-click="checkCompletionStatus(student.surveyStatus,student.smuId)"> {{student.smuId}}</a>
+        </td>
+        <td style="width: 250px; height: 21px; text-align: center;">{{yearInSchool[student.yearInSchool].text}}</td>
+        <td style="width: 250px; height: 21px; text-align: center;">{{compstat[student.surveyStatus].text}}</td>
+        <td style="width: 250px; height: 21px; text-align: center;">{{student.email}}</td>
+        <td style="width: 250px; height: 21px; text-align: center;">{{study[student.study].text}}</td>
+        <td style="width: 250px; height: 21px; text-align: center;">{{student.studentgroup}}</td>
+        <td style="width: 250px; height: 21px; text-align: center;">
+          <select data-ng-model="student.competency1" ng-change="dynSavecomp(student)">
+            <option ng-repeat="comp in competencyfilter" ng-model="comp.value">{{comp.text}}</option>
+          </select>
+        </td>
+        <td style="width: 250px; height: 21px; text-align: center;">
+          <select data-ng-model="student.competency2" ng-change="dynSavecomp(student)">
+            <option ng-repeat="comp in competencyfilter" ng-model="comp.value">{{comp.text}}</option>
+          </select>
+        </td>
+        <!-- <td style="width: 250px; height: 21px; text-align: center;">{{student.phonenumber}}</td> -->
+        <td style="width: 250px; height: 21px; text-align: center;">
+          <input type="checkbox" ng-model="student.allowview" ng-disabled="student.surveyStatus < 3" ng-click="saveAllowView(student)"></input>
+        </td>
+        <td style="width: 250px; height: 21px; text-align: center;">{{student.highestCompetency}}</td>
+        <td style="width: 250px; height: 21px; text-align: center;">{{student.lowestCompetency}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div align="center">
+    <ul ng-if="pager.pages.length" class="pagination">
+      <li ng-class="{disabled:pager.currentPage===1 }">
+        <a ng-click="setPage(1)">First</a>
+      </li>
+      <li ng-class="{disabled:pager.currentPage===1 }">
+        <a ng-click="setPage(pager.currentPage - 1)">Previous</a>
+      </li>
+      <li ng-repeat="page in pager.pages" ng-class="{active:pager.currentPage===p age}">
+        <a ng-click="setPage(page)">{{page}}</a>
+      </li>
+      <li ng-hide="pager.currentPage===p ager.totalPages">
+        <a ng-click="setPage(pager.currentPage + 1)">Next</a>
+      </li>
+      <li ng-if="pager.currentPage===p ager.totalPages" ng-class="{disabled:pager.currentPage===p ager.totalPages}">
+        <a>Next</a>
+      </li>
+      <li ng-if="pager.currentPage===p ager.totalPages" ng-class="{disabled:pager.currentPage===p ager.totalPages}">
+        <a>Last</a>
+      </li>
+      <li ng-hide="pager.currentPage===p ager.totalPages">
+        <a ng-click="setPage(pager.totalPages)">Last</a>
+      </li>
+    </ul>
+  </div>
+  <div align="center">
+    <button type="button" ng-click="viewSelectedResults()" class="start-Button">
+    <b>
+    <I>View Selected results </I>
+    </b>
+    </button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <button type="button" ng-click="printSelectedResults()" class="start-Button">
+    <b>
+    <I>Print Selected results </I>
+    </b>
+    </button>
+  </div>
+</div>
+</div>

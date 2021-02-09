@@ -1,0 +1,96 @@
+<div ng-controller="dlController as ctrl" ng-init="init()" style="font-family: Tahoma, Geneva, sans-serif">
+	<br>
+	<h1 style="text-align: center; font-weight: bold; color: #619f42"> Directive Leadership </h1>
+	<h3 style="text-align: center; color: #354ca1; font-weight: bold;"> “Intentional Learning is not accidental, and it is driven by a goal or need, even if you don’t know what that is.” </h3>
+	<span style="float: right; margin-right: 5%; font-size: 16px;"> - Peter Freeth </span><br><br>
+
+	<div style="border:1px solid #ddd; border-radius:1px; width: 92%; margin-left: 4%; margin-bottom: 4%; padding: 1%;">
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold"> Videos </span><br><br>
+
+		<div class="row" style="text-align: center;">
+
+    		<div class="col-sm-4"> </div>
+
+    		<div class="col-sm-4">
+			<a href="http://www.ted.com/talks/janine_benyus_shares_nature_s_designs.htm" target="_blank">
+			<img data-ng-src="../styles/DLv1.jpg" height="200px" width="400px"> </a><br><br>
+			Inspiration can come from anywhere. We just need to know where to look. <br><br>
+			<button type="button" data-ng-click="ctrl.dlv1()"> Take Quiz </button>
+    		</div>
+
+    		<div class="col-sm-4"> </div>
+
+		</div>
+
+		<br><br>
+
+		<div ng-if="ctrl.videoquiz==1" style="font-size: 16px; margin-left: 40px">
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold; margin-left: 0px"> Quiz on Video #{{ctrl.videoquiz}}
+		</span><br>
+			<div ng-if="ctrl.videoquiz==1">
+				<b> 1. What organism can dry out completely yet stay alive for months regenerating itself? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Tardigrade <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Rotifer <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Centigrade <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Cladocera <br><br>
+				<b> 2. What does Benyus do or say that changed everything for the wastewater engineers in their work? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> She took them on a trip to the Galapagos Islands. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> She told them what a seashell is made of and how it stops crystallization. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> She explained the difference between biomimicry and bioprocessing. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> She said and did nothing. <br><br>
+				<b> 3. With the wastewater engineers, how did Benyus display directive leadership? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> She led the project and did all of the work while the engineers went on holiday. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> She assured the engineers that everything they would need they would find on the island. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> She was pretty laissez-faire and did not expect much from the trip. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> She coordinated their trip, set the direction in which they should go, and monitored their progress. <br><br>
+				<b> 4. Directive leadership is a necessary skill to posses, but it may not always be the best method to use. When should you use directive leadership and when should you not? </b>
+				[free-text answer] <br><br>
+				<b> 5. Do you feel this video was helpful in your leadership development journey? </b> [free-text answer]
+			</div>
+
+			<br> <button type="button" data-ng-click="ctrl.submit()" style="margin-left: 40%; width: 10%"> Submit </button>
+		</div>
+
+		<br><br>
+
+			<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> Recommended Books </span><br><br>
+			<span style="font-size: 16px">
+			<li> Buckingham, Marcus, and Donald O. Clifton. Now, Discover Your Strengths. New York: Free, 2001. </li>
+			<li> Hawkins, Mike. Activating Your Ambition: A Guide to Coaching the Best out of Yourself and Others. Dallas, TX.: Brown Pub., 2009. </li>
+			<li> Pinkley, Robin L., and Gregory B. Northcraft. Get Paid What You're Worth: The Expert Negotiator's Guide to Salary and Compensation. New York: St. Martin's, 2000. </li>
+			</span><br><br>
+
+			<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> File Guide </span><br><br>
+			<a href="https://www.smu.edu/-/media/Site/Lyle/HCEL/FieldGuides/GRAD-Field-Guide-2016--FINAL-with-cover.ashx?la=en" target="_blank">
+			<img data-ng-src="../styles/fieldguide.JPG" style="margin-left: 5%" height="405px" width="315px"> </a><br><br>
+
+</div>
+
+</div>
+
+
+

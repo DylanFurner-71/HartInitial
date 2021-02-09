@@ -1,0 +1,68 @@
+package com.hart.core;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.hart.beans.SurveyResult;
+import com.hart.data.SurveyResultsDao;
+import com.hart.util.HartUtil;
+
+@Controller
+@Scope("request")
+public class HartController
+{
+	@RequestMapping(value = "/savesurveyresult", method = { RequestMethod.POST })
+	public @ResponseBody Object saveSurveyResult(@RequestBody SurveyResult surveyResult)
+	{
+		surveyResult.setSmuId(hartUtil.getId());
+		//surveyResultsDao.saveSurveyResult(surveyResult);
+		return "Success";
+	}
+
+	@RequestMapping(value = "/getsurveys", method = { RequestMethod.POST })
+	public @ResponseBody Object getSurveys()
+	{
+		SurveyResult surveyResult1, surveyResult2;
+		surveyResult1 = new SurveyResult();
+		surveyResult1.setGoodLeader("Deepak");
+		surveyResult1.setPoorLeader("Rashmi");
+		surveyResult1.setSmuId(11111111);
+		surveyResult1.setSurveyResp("3,1,2,3,1,2,4,1,2,3,1,2,3,1,2,3,1,2,3,1,2,2,1,2,3,1,2,3,1,4,3,1,2,3,1,2,4,1,2,3,1,2,3,1,3,3,1,4,3,1,2,3,1,2,3,1,2,3,1,2,3,5,2,3,1,2,3,1,2,3,1,4,3,1,2,5,1,2,3,3,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,3,3,1,2,3,1,2,3,1,2,3,2,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2");
+		surveyResult2 = new SurveyResult();
+		surveyResult2.setGoodLeader("Deepak");
+		surveyResult2.setPoorLeader("Rashmi");
+		surveyResult2.setSmuId(22222222);
+		surveyResult2.setSurveyResp("3,1,2,3,1,2,4,1,2,3,1,2,3,1,2,3,1,2,3,1,2,2,1,2,3,1,2,3,1,4,3,1,2,3,1,2,4,1,2,3,1,2,3,1,3,3,1,4,3,1,2,3,1,2,3,1,2,3,1,2,3,5,2,3,1,2,3,1,2,3,1,4,3,1,2,5,1,2,3,3,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,3,3,1,2,3,1,2,3,1,2,3,2,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2");
+		SurveyResult [] surveyResults = {surveyResult1, surveyResult2};
+		return surveyResults;
+		//return surveyResultsDao.getAllSurveyResults();
+	}
+
+	@RequestMapping(value = "/getsurveyresult", method = { RequestMethod.POST })
+	public @ResponseBody Object getSurveyResult(@RequestBody SurveyResult surveyResult)
+	{
+		// surveyResultsDao.getSurveyResult(surveyResult);
+		surveyResult = new SurveyResult();
+		surveyResult.setGoodLeader("Deepak");
+		surveyResult.setPoorLeader("Rashmi");
+		surveyResult.setSmuId(11111111);
+		surveyResult.setSurveyResp("3,1,2,3,1,2,4,1,2,3,1,2,3,1,2,3,1,2,3,1,2,2,1,2,3,1,2,3,1,4,3,1,2,3,1,2,4,1,2,3,1,2,3,1,3,3,1,4,3,1,2,3,1,2,3,1,2,3,1,2,3,5,2,3,1,2,3,1,2,3,1,4,3,1,2,5,1,2,3,3,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,3,3,1,2,3,1,2,3,1,2,3,2,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2");
+		return surveyResult;
+	}
+
+	@RequestMapping(value = "/test", method = { RequestMethod.GET })
+	public @ResponseBody Object test()
+	{
+		return "Hello";
+	}
+
+	@Autowired
+	SurveyResultsDao surveyResultsDao;
+	@Autowired
+	HartUtil hartUtil;
+}

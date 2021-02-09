@@ -1,0 +1,142 @@
+<div ng-controller="elController as ctrl" ng-init="init()" style="font-family: Tahoma, Geneva, sans-serif">
+	<br>
+	<h1 style="text-align: center; font-weight: bold; color: #619f42"> Engaging Leadership </h1>
+	<h3 style="text-align: center; color: #354ca1; font-weight: bold;"> “Intentional Learning is not accidental, and it is driven by a goal or need, even if you don’t know what that is.” </h3>
+	<span style="float: right; margin-right: 5%; font-size: 16px;"> - Peter Freeth </span><br><br>
+
+	<div style="border:1px solid #ddd; border-radius:1px; width: 92%; margin-left: 4%; margin-bottom: 4%; padding: 1%;">
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold"> Videos </span><br><br>
+
+		<div class="row" style="text-align: center;">
+
+			<div class="col-sm-1"></div>
+
+    		<div class="col-sm-4">
+			<a href="http://www.ted.com/talks/david_logan_on_tribal_leadership" target="_blank">
+			<img data-ng-src="../styles/ELv1.jpg" height="200px" width="400px"> </a><br><br>
+			David Logan talks about the five stages of tribes and how leaders navigate through all five.  <br><br>
+			<button type="button" data-ng-click="ctrl.elv1()"> Take Quiz </button>
+    		</div>
+
+    		<div class="col-sm-2"></div>
+
+   		 	<div class="col-sm-4">
+    		<a href="https://www.ted.com/talks/emily_pilloton_teaching_design_for_change?language=en#t-980489" target="_blank">
+			<img data-ng-src="../styles/ELv2.jpg" height="200px" width="400px"> </a><br><br>
+			A program helped create a group of student leaders by incorporating design in to their education. <br>
+			<button type="button" data-ng-click="ctrl.elv2()"> Take Quiz </button>
+   		 	</div>
+
+		</div>
+
+		<br><br>
+
+		<div ng-if="ctrl.videoquiz==1 || ctrl.videoquiz==2 || ctrl.videoquiz==3 || ctrl.videoquiz==4 || ctrl.videoquiz==5"
+		style="font-size: 16px; margin-left: 40px">
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold; margin-left: 0px"> Quiz on Video #{{ctrl.videoquiz}}
+		</span><br>
+			<div ng-if="ctrl.videoquiz==1">
+				<b> 1. Leaders need to be able to talk all the levels so that they can touch every person in society. </b>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> True <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> False <br><br>
+				<b> 2. What is the greatest challenge in innovation in regards to the Five Stages? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Just helping someone move onto another stage at all. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Making a person stuck in Stage One want to get to Stage Two. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Jumping from Stage Two to Stage Five. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Moving your group from Stage Three to Stage Four. <br><br>
+				<b> 3. Leaders need to be able to talk at all levels. But then what is it they must NOT do when they talk to others?
+				</b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Prepare them the next level. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Leave them where they found them. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Try talking to them at level below and a level higher. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Engage with them at their current level to build trust. <br><br>
+				<b> 4. Which tribe do you think leaders belong to? How would you be able to move into that? </b>
+				[free-text answer]
+			</div>
+
+			<div ng-if="ctrl.videoquiz==2">
+				<b> 1. In Bertie County, how many people are there per square kilometer? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> 17 <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> 8 <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> 10 <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> 27 <br><br>
+				<b> 2.Which approach was NOT used when intersecting design and education for Project H? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Design for education <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Designing education vocationally <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Redesigning education <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Design as education <br><br>
+				<b> 3. What does design and building offer to public education? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> A different kind of classroom. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Another reason to allocate more funding to education. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> A chance for kids to enter the workforce early. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> For OSHA to come by and check for regulation compliance. <br><br>
+				<b> How can you work on your engaging leadership skills in your classes or extracurricular activities? </b>
+				[free-text answer]
+			</div>
+
+			<br> <button type="button" data-ng-click="ctrl.submit()" style="margin-left: 40%; width: 10%"> Submit </button>
+		</div>
+
+		<br><br>
+
+			<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> Recommended Books </span><br><br>
+			<span style="font-size: 16px">
+			<li> Buckingham, Marcus, and Donald O. Clifton. Now, Discover Your Strengths. New York: Free, 2001. </li>
+			<li> Hawkins, Mike. Activating Your Ambition: A Guide to Coaching the Best out of Yourself and Others. Dallas, TX.: Brown Pub., 2009. </li>
+			<li> Pinkley, Robin L., and Gregory B. Northcraft. Get Paid What You're Worth: The Expert Negotiator's Guide to Salary and Compensation. New York: St. Martin's, 2000. </li>
+			</span><br><br>
+
+			<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> File Guide </span><br><br>
+			<a href="https://www.smu.edu/-/media/Site/Lyle/HCEL/FieldGuides/GRAD-Field-Guide-2016--FINAL-with-cover.ashx?la=en" target="_blank">
+			<img data-ng-src="../styles/fieldguide.JPG" style="margin-left: 5%" height="405px" width="315px"> </a><br><br>
+
+</div>
+
+</div>
+
+
+

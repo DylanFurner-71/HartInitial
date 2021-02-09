@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="61" height="61" viewBox="0 0 61 61">
+  <defs>
+    <style>
+
+      .cls-3 {
+        fill: #3890ff;
+      }
+
+      .cls-4 {
+        stroke: #ffffff;
+        stroke-width: 1px;
+        fill: none;
+      }
+
+      .cls-6 {
+        fill: #ffffff;
+      }
+    </style>
+  </defs>
+  <g id="add_new">
+    <path d="M4.001,0.001 C4.001,0.001 55.999,0.001 55.999,0.001 C58.208,0.001 59.999,1.792 59.999,4.001 C59.999,4.001 59.999,55.999 59.999,55.999 C59.999,58.208 58.208,59.999 55.999,59.999 C55.999,59.999 4.001,59.999 4.001,59.999 C1.792,59.999 0.001,58.208 0.001,55.999 C0.001,55.999 0.001,4.001 0.001,4.001 C0.001,1.792 1.792,0.001 4.001,0.001 Z" id="path-1" class="cls-3" fill-rule="evenodd"/>
+    <g id="cross">
+      <rect id="rect-1" class="cls-6" x="29" y="16" width="2" height="28"/>
+      <rect id="rect-2" class="cls-6" x="16" y="29" width="28" height="2"/>
+    </g>
+  </g>
+</svg>

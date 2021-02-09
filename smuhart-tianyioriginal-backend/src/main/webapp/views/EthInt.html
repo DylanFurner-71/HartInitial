@@ -1,0 +1,140 @@
+<div ng-controller="eiController as ctrl" ng-init="init()" style="font-family: Tahoma, Geneva, sans-serif">
+	<br>
+	<h1 style="text-align: center; font-weight: bold; color: #619f42"> Ethics and Integrity </h1>
+	<h3 style="text-align: center; color: #354ca1; font-weight: bold;"> “Intentional Learning is not accidental, and it is driven by a goal or need, even if you don’t know what that is.” </h3>
+	<span style="float: right; margin-right: 5%; font-size: 16px;"> - Peter Freeth </span><br><br>
+
+	<div style="border:1px solid #ddd; border-radius:1px; width: 92%; margin-left: 4%; margin-bottom: 4%; padding: 1%;">
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold"> Videos </span><br><br>
+
+		<div class="row" style="text-align: center;">
+
+			<div class="col-sm-4">
+				<a href="http://www.ted.com/talks/fields_wicker_miurin_learning_from_leadership_s_missing_manual.html" target="_blank">
+			<img src="../styles/EIv1.jpg" height="200px" width="400px"> </a><br><br> Fields Wicker-Miurin tells stories of remarkable
+				leaders and many times, leaders are found in unlikely people. <br><br>
+				<button type="button" data-ng-click="ctrl.eiv1()"> Take Quiz </button>
+			</div>
+
+			<div class="col-sm-4"></div>
+
+			<div class="col-sm-4">
+				<a href="https://www.ted.com/talks/zeynep_tufekci_machine_intelligence_makes_human_morals_more_important" target="_blank">
+			<img src="../styles/EIv3.jpg" height="200px" width="380px"> </a><br><br> A leader's values will be tested at some
+				point. <br>
+				<button type="button" data-ng-click="ctrl.eiv3()"> Take Quiz </button>
+			</div>
+
+		</div>
+
+		<br><br>
+
+		<div ng-if="ctrl.videoquiz==1 || ctrl.videoquiz==2" style="font-size: 16px; margin-left: 40px">
+			<span style="font-size: 24px; color: #cc0000; font-weight: bold; margin-left: 0px"> Quiz on Video #{{ctrl.videoquiz}}
+		</span><br>
+			<div ng-if="ctrl.videoquiz==1">
+				<b> 1. What was Fields Wicker-Miurin first occupation? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Curator <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Banker <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> English literature professor <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Homemaker <br><br>
+				<b> 2. Benki, leader of the Ashaninka Nation, became the leader of his people at what age? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> 18 <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> 20 <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> 10 <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> 16 <br><br>
+				<b> 3. What traits did Benki, Sanghimitra, and Dr. Jianchuan all have in common? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Drive, egotistical, and passion. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Passion, selfishness, and drive. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Commitment, passion, and pessimism. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Drive, passion, and commitment. <br><br>
+				<b> 4. What can we do to instill leadership attributes in children when they’re young so it can develop and flourish over the years? What can we do for college students? </b>				[free-text answer] <br><br>
+				<b> 5. Do you feel that this video has been helpful in your leadership development journey? </b> [free-text answer]
+			</div>
+
+			<div ng-if="ctrl.videoquiz==2">
+				<b> 1. Who was Tufekci’s manager referring to when he asked her, “Can he tell if I’m lying”? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> The receptionist <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> The company mascot <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> The computer <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> The water cooler <br><br>
+				<b> 2. When protests broke out in Ferguson, MO, the news never really showed up on Facebook’s newsfeed for people. Why was Ferguson’s story not algorithm-friendly on Facebook? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Nobody was talking about it. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> It was not “likeable”. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> FOX news covered it up. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> None of these. <br><br>
+				<b> 3. Whose problem is it when an artificial intelligence system gets things wrong? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Google <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Skynet <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Nobody <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Humans <br><br>
+				<b> 4. Was there a time when you made a decision based on your values or morals? Would you make the same decision or not and why? </b>				[free-text answer]
+			</div>
+
+			<br> <button type="button" data-ng-click="ctrl.submit()" style="margin-left: 40%; width: 10%"> Submit </button>
+		</div>
+
+		<br><br>
+
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> Recommended Books </span><br><br>
+		<span style="font-size: 16px">
+			<li> Buckingham, Marcus, and Donald O. Clifton. Now, Discover Your Strengths. New York: Free, 2001. </li>
+			<li> Hawkins, Mike. Activating Your Ambition: A Guide to Coaching the Best out of Yourself and Others. Dallas, TX.: Brown Pub., 2009. </li>
+			<li> Pinkley, Robin L., and Gregory B. Northcraft. Get Paid What You're Worth: The Expert Negotiator's Guide to Salary and Compensation. New York: St. Martin's, 2000. </li>
+			</span><br><br>
+
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> File Guide </span><br><br>
+		<a href="https://www.smu.edu/-/media/Site/Lyle/HCEL/FieldGuides/GRAD-Field-Guide-2016--FINAL-with-cover.ashx?la=en" target="_blank">
+			<img src="../styles/fieldguide.JPG" style="margin-left: 5%" height="405px" width="315px"> </a><br><br>
+
+	</div>
+
+</div>

@@ -1,0 +1,54 @@
+<div ng-controller="AssessmentController as ctrl" ng-init="init()">
+	<div id="homebody">
+		<div class="myleadership">
+			<h1>My Leadership Dashboard</h1>
+			<div>
+				<h3>
+					<I>"The most powerful leadership tool you have is your own personal example"</I>
+					- John Wooden
+				</h3>
+				<p>Dear Student, You can use this dashboard to keep track of your leadership progress</p>
+			</div>
+			<div>
+				<div>
+					<h3>Your Leadership Profile</h3>
+					<img src="../styles/profile.png" alt="" />
+					<p>
+						Name : {{profileInfo.name}}<br>
+						Selected competencies : {{profileInfo.competency1}} and {{profileInfo.competency2}}
+					<br>
+					<div ng-show ="profileInfo.allowview==1">
+		<a style="font-weight: bold" ng-click="getSurveyResult(profileInfo.smuId)"> Click here </a> to view your assessment report <br>
+		</div>
+					</p>
+
+				</div>
+				<div>
+					<h3>
+						Currently you are working on
+						<I>"Personal Leadership"</i>
+					</h3>
+					<img src="../styles/personalleadership.png" alt="" />
+					<p>
+						Personal Leadership Comprises of
+						<b>Self Awareness, Intentional Learning & Communication</b>
+					</p>
+				</div>
+				<div>
+					<h3>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Your Score</h3>
+					<img src="../styles/score.png" alt="" />
+					<br>
+					<p>
+						&nbsp&nbsp
+						<b>Your Current Score is 20/30! Way to Go!</b>
+					</p>
+				</div>
+
+			</div>
+		</div>
+		<div id="homefooter">
+			<div></div>
+
+		</div>
+	</div>
+</div>

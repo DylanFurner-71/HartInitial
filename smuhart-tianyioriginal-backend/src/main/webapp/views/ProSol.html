@@ -1,0 +1,150 @@
+<div ng-controller="psController as ctrl" ng-init="init()" style="font-family: Tahoma, Geneva, sans-serif">
+	<br>
+	<h1 style="text-align: center; font-weight: bold; color: #619f42"> Problam Solving </h1>
+	<h3 style="text-align: center; color: #354ca1; font-weight: bold;"> “Intentional Learning is not accidental, and it is driven by a goal or need, even if you don’t know what that is.” </h3>
+	<span style="float: right; margin-right: 5%; font-size: 16px;"> - Peter Freeth </span><br><br>
+
+	<div style="border:1px solid #ddd; border-radius:1px; width: 92%; margin-left: 4%; margin-bottom: 4%; padding: 1%;">
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold"> Videos </span><br><br>
+
+		<div class="row" style="text-align: center;">
+
+			<div class="col-sm-4">
+				<a href="http://www.ted.com/talks/amy_smith_shares_simple_lifesaving_design.html" target="_blank">
+			<img src="../styles/PSv1.jpg" height="200px" width="400px"> </a><br><br> Engineers can take a problem and design innovative
+				solutions. <br><br>
+				<button type="button" data-ng-click="ctrl.psv1()"> Take Quiz </button>
+			</div>
+
+			<div class="col-sm-4">
+				<a href="https://www.ted.com/talks/achenyo_idachaba_how_i_turned_a_deadly_plant_into_a_thriving_business" target="_blank">
+			<img src="../styles/PSv2.jpg" height="200px" width="400px"> </a><br><br> Look past the problem with creative solutions.
+				<br>
+				<button type="button" data-ng-click="ctrl.psv2()"> Take Quiz </button>
+			</div>
+
+			<div class="col-sm-4">
+				<a href="https://www.ted.com/talks/anthony_goldbloom_the_jobs_we_ll_lose_to_machines_and_the_ones_we_won_t?language=en" target="_blank">
+			<img src="../styles/PSv3.jpg" height="200px" width="380px"> </a><br><br> Anthony Goldbloom discusses how we will eventually
+				lose some of our jobs to machines. However, machines will never be able to tackle novel situations quite like humans.
+				<br>
+				<button type="button" data-ng-click="ctrl.psv3()"> Take Quiz </button>
+			</div>
+
+		</div>
+
+		<br><br>
+
+		<div ng-if="ctrl.videoquiz==1 || ctrl.videoquiz==2 || ctrl.videoquiz==3" style="font-size: 16px; margin-left: 40px">
+			<span style="font-size: 24px; color: #cc0000; font-weight: bold; margin-left: 0px"> Quiz on Video #{{ctrl.videoquiz}}
+		</span><br>
+			<div ng-if="ctrl.videoquiz==1">
+				<b> 1. What is the waste product extracted from the sugarcane juice called? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Sugar <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Bagasse <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Collagen <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Transglutaminase <br><br>
+				<b> 2. When Smith went to India to work on a cleaner burning fuel, she discovered that there was no sugarcane or cassava root to be used as a binding agent. What did she and her team do? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> They had a fit. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> They tried to see how much it would cost to have those items imported from neighboring countries. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> It was no problem. Just looked for the next best available resource. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> They gave up and went home. <br><br>
+				<b> 3. Smith believes that finding clean-burning briquettes is a perfect example of a non-zero-sum because of the:
+				</b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> health benefits <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> environmental benefits <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> economic benefits <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> all of the above <br><br>
+				<b> 4. Smith believes that engineers, among other professionals, should work towards finding solutions for the world that we live in, the world where people living on a less than a dollar day. What are ways that you can contribute to your community with your problem solving skills?  </b>				[free-text answer]
+			</div>
+
+			<div ng-if="ctrl.videoquiz==2">
+				<b> 1. What the second step in Idachaba’s “three simple steps to a mega solution? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Dry the water hyacinth stems. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Burn the water hyacinth stems. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Throw away the water hyacinth stems. <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Eat the water hyacinth stems. <br><br>
+				<b> 2. What is one name that is NOT used for the water hyacinth? </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Eichhornia crassipes <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Babingida <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Gbe’borun <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Yanrin <br><br>
+				<b> 4. Do you think it could really be that easy as coming up with three simple steps like Idachaba did for that riverine community? Is there anyway that we could make it that easy? </b>				[free-text answer]
+			</div>
+
+			<div ng-if="ctrl.videoquiz==3">
+				<b> 1. During WWII, Percy Spencer invented the: </b><br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Radar <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Toaster oven <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Microwave oven <br>
+				<label>
+				<input type="radio" name="{{}}" value=1 ng-model="ctrl.[][]">
+				</label> Vacuum <br><br>
+				<b> 2. Creativity and problem solving go hand in hand. Is problem solving one of your strong suits? How have you used that set of skills in the past? </b>				[free-text answer]
+			</div>
+
+			<br> <button type="button" data-ng-click="ctrl.submit()" style="margin-left: 40%; width: 10%"> Submit </button>
+		</div>
+
+		<br><br>
+
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> Recommended Books </span><br><br>
+		<span style="font-size: 16px">
+			<li> Buckingham, Marcus, and Donald O. Clifton. Now, Discover Your Strengths. New York: Free, 2001. </li>
+			<li> Hawkins, Mike. Activating Your Ambition: A Guide to Coaching the Best out of Yourself and Others. Dallas, TX.: Brown Pub., 2009. </li>
+			<li> Pinkley, Robin L., and Gregory B. Northcraft. Get Paid What You're Worth: The Expert Negotiator's Guide to Salary and Compensation. New York: St. Martin's, 2000. </li>
+			</span><br><br>
+
+		<span style="font-size: 24px; color: #cc0000; font-weight: bold;"> File Guide </span><br><br>
+		<a href="https://www.smu.edu/-/media/Site/Lyle/HCEL/FieldGuides/GRAD-Field-Guide-2016--FINAL-with-cover.ashx?la=en" target="_blank">
+			<img src="../styles/fieldguide.JPG" style="margin-left: 5%" height="405px" width="315px"> </a><br><br>
+
+	</div>
+
+</div>

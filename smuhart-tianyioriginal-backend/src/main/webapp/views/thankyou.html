@@ -1,0 +1,76 @@
+<div data-ng-controller="thankYou as ctrl" ng-init="init()">
+  <div class=WordSection1 ng-show="linkFlag==0">
+    <p class=xmsonormal align=center style='margin: 0in; margin-bottom: .0001pt; text-align: center; background: white'>
+      <span style='font-size: 16.5pt; font-family: "Helvetica", sans-serif; color: #404040'>Thank you for completing the Hart Leadership Assessment!</span>
+      <br>
+      <br>
+      <!-- <span style='font-size: 13pt; font-family: "Helvetica", sans-serif; color: #404040'>
+				You will receive your results along with a personal leadership development plan at the Lyle Engineering Orientation Session on {{sessiondate}}
+				<br>
+			</span> -->
+
+    </p>
+    <div style="font-size: 13pt; text-align: center; font-family: Helvetica">{{thankyounote}}</div>
+    <!-- <div class=xmsonormal align=center style='margin: 0in; margin-bottom: .0001pt; text-align: center; background: white; orphans: auto; widows: 1; -webkit-text-stroke-width: 0px; word-spacing: 0px'>
+			<span style='font-size: 10.0pt; font-family: "Helvetica", sans-serif; color: #404040'> </span><b><span style='font-size: 11.0pt; font-family: "Helvetica", sans-serif; color: firebrick'>Hart Leadership Assessment Review <br> {{sessiondate}}<br> Caruth Hall, Shepherd Atrium<br> 4:00 pm - 5:30 pm
+			</span></b><span style='font-size: 11.0pt; font-family: "Helvetica", sans-serif; color: #404040'><br> Light Refreshments &amp; T-Shirts (while they last)</span>
+		</div> -->
+  </div>
+
+  <div class=WordSection1 ng-show="linkFlag==1" )>
+    <p class=xmsonormal align=center style='margin: 0in; margin-bottom: .0001pt; text-align: center; background: white'>
+      <span style='font-size: 16.5pt; font-family: "Helvetica", sans-serif; color: #404040'>Thank you for completing the Hart Leadership Assessment!</span>
+      <br>
+      <span style='font-size: 11.0pt; font-family: "Helvetica", sans-serif; color: #404040'>
+				You will receive your results along with a personal leadership development plan on {{sessiondate}} at the Lyle Engineering Debrief Session and Parents Reception.
+				<br>
+					Please reserve your spot to receive your leadership report and a free T-Shirt.
+			</span>
+      <span style='font-size: 10.0pt; font-family: "Helvetica", sans-serif; color: #404040'>
+				<br>
+			</span>
+      <span style='font-size: 10.0pt; font-family: "Helvetica", sans-serif; color: #007AC0'>
+				<a href="http://www.smu.edu/Lyle/Centers/HartCenter/Events/UpcomingEvents/HLADebriefandParentReception081716" target="_blank">http://www.smu.edu/Lyle/Centers/HartCenter/Events/LeadershipAssessmentDebrief</a>
+			</span>
+    </p>
+    <div class=xmsonormal align=center style='margin: 0in; margin-bottom: .0001pt; text-align: center; background: white; orphans: auto; widows: 1; -webkit-text-stroke-width: 0px; word-spacing: 0px'>
+      <br>
+      <b>
+				<span style='font-size: 11.0pt; font-family: "Helvetica", sans-serif; color: firebrick'>
+					Hart Leadership Assessment Review &amp; Parent Reception
+					<br>
+					{{sessiondate}}
+					<br>
+					Caruth Hall, Shepherd Atrium
+					<br>
+					<!-- 4:00 pm - 5:30 pm -->
+				</span>
+			</b>
+      <span style='font-size: 11.0pt; font-family: "Helvetica", sans-serif; color: #404040'>
+				<br>
+				Light Refreshments &amp; T-Shirts (while they last)
+			</span>
+    </div>
+    <div style="font-size: 13pt; text-align: center; font-family: Helvetica">{{thankyounote}}</div>
+  </div>
+
+  <div class=WordSection1 ng-show="linkFlag==2">
+
+    <p class=xmsonormal align=center style='margin: 0in; margin-bottom: .0001pt; text-align: center; background: white'>
+      <span style='font-size: 16.5pt; font-family: "Helvetica", sans-serif; color: #404040'>Thank you for completing the Hart Leadership Assessment!</span>
+      <span style='font-size: 10.0pt; font-family: "Helvetica", sans-serif; color: #404040'>
+				<br>
+				<br>
+			</span>
+      <span style='font-size: 14.0pt; font-family: "Helvetica", sans-serif; color: #404040'>
+				<a ng-click="redirectpath()">Please click here to view your survey results.</a>
+			</span>
+    </p>
+
+  </div>
+
+  <div class="thankyou-page">
+    <img src="../styles/hartlogo.jpg" height="400px" width="600px">
+  </div>
+
+</div>
